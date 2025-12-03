@@ -1,0 +1,146 @@
+/* Nombre del archivo: accessCards.css (ACTUALIZADO) */
+
+/* --- ESTILOS PARA EL CONTENIDO PRINCIPAL DEL BODY (GRID DE TARJETAS) --- */
+
+.main-content {
+    /* Mantiene el contenido centrado y con margen interno */
+    width: 90%;
+    max-width: 1200px; /* Ancho máximo para el contenido en pantallas grandes */
+    margin: 20px auto;
+    padding: 20px 0;
+}
+
+.grid-title {
+    color: var(--texto);
+    font-size: 2rem;
+    margin-bottom: 25px;
+    border-bottom: 3px solid var(--verde);
+    padding-bottom: 10px;
+    font-weight: 300;
+}
+
+.main-content-grid {
+    display: grid;
+    /* CAMBIO CLAVE: Permite 4 columnas. minmax(220px, 1fr) */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px; /* Ligeramente reducido para ahorrar espacio */
+    padding: 10px;
+}
+
+/* --- ESTILOS DE LA TARJETA INDIVIDUAL (El Botón) --- */
+
+.access-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    /* REDUCCIÓN DE TAMAÑO: Padding vertical más bajo */
+    padding: 20px 15px; 
+    background: var(--blanco);
+    border-radius: 10px;
+    text-decoration: none; 
+    color: var(--texto);
+    
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto hover: Levantar y cambiar color al pasar el ratón */
+.access-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+    background-color: var(--gris);
+}
+
+/* Contenedor del Ícono */
+.card-icon-container {
+    /* REDUCCIÓN DE TAMAÑO: Ícono un poco más pequeño */
+    width: 60px;
+    height: 60px;
+    background-color: var(--verde);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px; /* Margen reducido */
+}
+
+/* Estilo del Ícono */
+.card-icon {
+    /* REDUCCIÓN DE TAMAÑO: Fuente del ícono más pequeña */
+    color: var(--blanco);
+    font-size: 2rem;
+}
+
+.card-title {
+    font-size: 1.15rem; /* Fuente del título ligeramente reducida */
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--texto);
+}
+
+.card-description {
+    font-size: 0.85rem; /* Fuente de la descripción más pequeña */
+    color: #666;
+    margin-top: 5px;
+}
+
+
+/* --- RESPONSIVE ADICIONAL --- */
+@media (max-width: 600px) {
+    .main-content {
+        width: 100%;
+        padding: 10px;
+        margin: 10px auto;
+    }
+    .main-content-grid {
+        /* Una sola columna en móviles pequeños */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+}
+
+/* Estilos para el contenedor principal de la lista de cumpleaños */
+#cumpleanios-listado ul {
+    list-style: none; /* Elimina los puntos predeterminados de la lista */
+    padding-left: 0;
+    margin-top: 10px;
+    
+    /* Contenedor visual */
+    background: var(--blanco, #ffffff);
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil */
+}
+
+/* Estilos para cada elemento (cada persona) en la lista */
+#cumpleanios-listado li {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee; /* Separador sutil */
+    display: flex; /* Para alinear el nombre a la izquierda y el mensaje a la derecha */
+    justify-content: space-between;
+}
+
+/* Elimina el borde inferior del último elemento */
+#cumpleanios-listado li:last-child {
+    border-bottom: none;
+}
+
+/* Estilo para los cumpleaños de HOY (resaltado) */
+/* NOTA: Este estilo es el que el JS debe aplicar condicionalmente */
+.cumple-hoy {
+    font-weight: bold;
+    color: var(--verde, #088024); /* Usa el color verde principal */
+    background-color: #e6ffe6; /* Fondo verde claro para destacar */
+}
+
+/* Estilo para el mensaje de días restantes */
+#cumpleanios-listado li span {
+    font-weight: normal;
+    color: #666; /* Texto secundario gris */
+}
+
+/* Estilo para el mensaje cuando no hay cumpleaños */
+#cumpleanios-listado p {
+    color: #666;
+    padding: 10px;
+}
