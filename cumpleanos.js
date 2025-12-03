@@ -114,7 +114,7 @@ function mostrarCumpleanios(lista) {
             const estilo = item.dias === 0 ? `style="font-weight: bold; color: ${colorVerde}; background-color: #e6ffe6; padding: 10px 15px; border-bottom: 1px solid #eee;"` : 'style="background: #fff; padding: 10px 15px; border-bottom: 1px solid #eee;"';
             
             // Nota: Aquí se usa item.mensaje, que ya incluye el formato de fecha (DD de mes)
-            html += `<li ${estilo}>${item.nombre} <span style="float: right;">${item.mensaje}</span></li>`;
+            html += `<li ${estilo}>${item.nombre} <span>${item.mensaje}</span></li>`;
         });
         html += '</ul>';
     }

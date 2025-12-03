@@ -1,5 +1,3 @@
-/* Nombre del archivo: accessCards.css (ACTUALIZADO) */
-
 /* --- ESTILOS PARA EL CONTENIDO PRINCIPAL DEL BODY (GRID DE TARJETAS) --- */
 
 .main-content {
@@ -143,4 +141,30 @@
 #cumpleanios-listado p {
     color: #666;
     padding: 10px;
+}
+
+/* --- MEJORA ASPECTO MOVIL DE CUMPLEAÑOS --- */
+
+@media (max-width: 600px) {
+    /* Ajuste de tipografía general para ahorrar espacio */
+    #cumpleanios-listado, 
+    #cumpleanios-listado ul li {
+        font-size: 0.9em; /* Reduce ligeramente el tamaño de la letra */
+    }
+
+    /* Regla clave para que el nombre y el mensaje no se monten */
+    #cumpleanios-listado ul li {
+        display: flex; /* Convierte el LI en un contenedor flexible */
+        justify-content: space-between; /* Empuja el nombre a la izquierda y el mensaje a la derecha */
+        gap: 5px; /* Pequeño espacio entre los elementos */
+        align-items: center;
+    }
+    
+    /* Asegurar que el mensaje de fecha sea legible */
+    #cumpleanios-listado ul li span {
+        text-align: right;
+        flex-shrink: 0; /* Evita que el mensaje se comprima */
+        /* Aseguramos que el texto del mensaje se mantenga horizontal */
+        white-space: nowrap; 
+    }
 }
