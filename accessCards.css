@@ -22,7 +22,7 @@
 .main-content-grid {
     display: grid;
     /* CAMBIO CLAVE: Permite 4 columnas. minmax(220px, 1fr) */
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
     gap: 25px; /* Ligeramente reducido para ahorrar espacio */
     padding: 10px;
 }

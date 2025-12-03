@@ -1217,10 +1217,9 @@
     "__4": "",
     "__5": ""
   },
-  {
-    "nombre": "CABO 1RO. HOLCOMB CANALES IGNACIO ALEJANDRO",
-    "fecha_nacimiento": "07-12-1993"
-   },
+
+  { "nombre": "CABO 1RO. HOLCOMB CANALES IGNACIO ALEJANDRO","fecha_nacimiento": "07-12-1993"},
+
   {
     "nombre": "CABO 1RO. ZU�IGA ALARCON EDGAR ENRIQUE",
     "fecha_nacimiento": "26-03-1993"
@@ -1825,10 +1824,9 @@
     "__4": "",
     "__5": ""
   },
-  {
-    "nombre": "C.P.R. ARCHIVERO (GDO. 13) GODOY MORENO GONZALO FRANCISCO",
-    "fecha_nacimiento": "09-12-1984"
-  },
+
+  {"nombre": "C.P.R. ARCHIVERO (GDO. 13) GODOY MORENO GONZALO FRANCISCO","fecha_nacimiento": "09-12-1984"},
+  
   {
     "nombre": "BIBLIOTECARIA COMP. (GDO. 11) MENDOZA ARTEAGA SARA ROSA",
     "fecha_nacimiento": "25-07-1973",
@@ -1870,7 +1868,7 @@
     "__5": ""
   },
   
-  {"nombre": "C.P.R. PELUQUERA (GDO. 11) ACEITUNO PÉREZ CLAUDIA PAULINA","fecha_nacimiento": "03-12-1969"},
+  {"nombre": "C.P.R. PELUQUERA (GDO. 11) ACEITUNO PEREZ CLAUDIA PAULINA","fecha_nacimiento": "06-12-1969"},
   {
     "nombre": "C.P.R. AUX. SERV. MENORES (GDO. 14) URBINA TEJOS ROSA ENRIQUETA",
     "fecha_nacimiento": "21-03-1964",
@@ -2351,10 +2349,9 @@
     "__4": "",
     "__5": ""
   },
-  {
-    "nombre": "SUBOFICIAL MAYOR LARA CANCINO CESAR ARMANDO",
-    "fecha_nacimiento": "08-12-1970"
-  },
+
+  {"nombre": "SUBOFICIAL MAYOR LARA CANCINO CESAR ARMANDO","fecha_nacimiento": "08-12-1970"},
+
   {
     "nombre": "SUBOFICIAL MU�OZ RABANAL GABRIEL RODRIGO",
     "fecha_nacimiento": "22-03-1981",

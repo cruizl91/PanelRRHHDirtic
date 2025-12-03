@@ -152,7 +152,7 @@ main {
     font-size: 1em;
     font-weight: bold;
     /* Esto asegura la separación del logo/brand */
-    margin-left: 20px;
+    text-align: center;
     color: var(--blanco); /* Asegura que el texto sea blanco, heredado del .main-header */
 }
 
