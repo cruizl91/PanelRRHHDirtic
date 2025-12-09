@@ -7,386 +7,86 @@
   
   {"nombre": "SUBOFICIAL MAYOR HEVIA SALVO YOLANDA MARLENE","fecha_nacimiento": "26-06-1975"},
   
-  {
-    "nombre": "C.P.R. (GDO. 12) VALDES TAPIA JOSE DANIEL",
-    "fecha_nacimiento": "25-03-1955",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SUBOFICIAL FARIAS CANALES CHRISTIAN BERNARDO",
-    "fecha_nacimiento": "20-08-1978",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 1RO. FONSECA GUEVARA FRANCISCO JOSE",
-    "fecha_nacimiento": "04-10-1972",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 1RO. FLORES VALENZUELA LUIS ARMANDO",
-    "fecha_nacimiento": "02-09-1973",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 2DO. FUENTES CASTRO JUAN ROBERTO",
-    "fecha_nacimiento": "05-11-1986",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 2DO. BAZAN ROJAS LEONARDO ENRIQUE",
-    "fecha_nacimiento": "25-04-1972",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 10) JARA ESPINOZA JOSE MANUEL",
-    "fecha_nacimiento": "19-10-1961",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CAPITAN (J) VIDAL BASSALETTI MARIA FERNANDA",
-    "fecha_nacimiento": "04-04-1986",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "ADMINISTRATIVO (J) GDO. 12 JARA VASQUEZ XIMENA MARIA",
-    "fecha_nacimiento": "18-06-1975",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 12) GARRIDO CACERES ABEL ANTONIO",
-    "fecha_nacimiento": "16-10-1964",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SUBOFICIAL CACERES CASTILLO CRISTIAN RODRIGO",
-    "fecha_nacimiento": "01-12-1980",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CABO 1RO. RUIZ LEIVA CARLOS ROBERTO",
-    "fecha_nacimiento": "22-12-1991",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 12) RENCORET FARIAS ALEJANDRA PATRICIA",
-    "fecha_nacimiento": "18-01-1973",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 09) FLORES ALVARADO ELIZABETH DEL CARMEN",
-    "fecha_nacimiento": "16-12-1975",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CORONEL RIFFO SAEZ JOSE LUIS",
-    "fecha_nacimiento": "10-08-1978",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CAPITAN MANCILLA ANDRADE ALFONSO ALEJANDRO",
-    "fecha_nacimiento": "03-11-1990",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 2DO. CARDENAS CAMPOS WERNER PATRICIO",
-    "fecha_nacimiento": "03-04-1986",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 09) SANTANDER POBLETE VERONICA ANDREA",
-    "fecha_nacimiento": "24-05-1984",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CAPITAN CASTRO VARGAS JOSE GUILLERMO",
-    "fecha_nacimiento": "05-09-1971",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 2DO. CANDIA VARGAS MAURICIO JAVIER",
-    "fecha_nacimiento": "18-05-1984",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 2DO. PACHECO SANDOVAL GERARDO ADOLFO",
-    "fecha_nacimiento": "29-04-1989",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (ART. 37�) BARISON EGERT FRANCISCO JAVIER",
-    "fecha_nacimiento": "07-03-1963",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 08) LOPEHANDIA VALDES ANDRES FELIPE",
-    "fecha_nacimiento": "18-10-1977",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 10) MOREIRA MOREIRA CRISTIAN RODRIGO",
-    "fecha_nacimiento": "25-04-1977",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CAPITAN INOSTROZA ESCOBAR CARLOS ANDRES",
-    "fecha_nacimiento": "01-12-1987",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "PROGRAMADOR (GDO. 09) HORMAZABAL VALLADARES CLAUDIO ANDRES",
-    "fecha_nacimiento": "21-04-1980",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 09) PONCE PICCARDO RAFAEL EMILIANO",
-    "fecha_nacimiento": "04-11-1947",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 12) RIOSECO RIOSECO DANILO ESTEBAN",
-    "fecha_nacimiento": "13-09-1988",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CAPITAN RAMIREZ VEAS MIGUEL ANGEL",
-    "fecha_nacimiento": "04-07-1987",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 2DO. ALARCON REYES ANIBAL ALEXCI",
-    "fecha_nacimiento": "02-09-1986",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CABO 1RO. RIOS DIAZ FELIPE ANDRES",
-    "fecha_nacimiento": "23-08-1992",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "CABO 1RO. CASTILLO FIERRO RIGOBERTO ALFREDO",
-    "fecha_nacimiento": "19-12-1992",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "SARGENTO 2DO. MU�OZ GARCIA DARWIN HARRINSON",
-    "fecha_nacimiento": "22-09-1982",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (ART. 37�) LOPEZ COFRE JUAN CARLOS",
-    "fecha_nacimiento": "14-09-1980",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 09) URREA OLIVOS CHRISTOPHER GERARDO",
-    "fecha_nacimiento": "08-08-1978",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 09) ROJAS GOMEZ BERNARDO ANTONIO",
-    "fecha_nacimiento": "28-11-1987",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 11) VASQUEZ DELGADO JOSE IGNACIO",
-    "fecha_nacimiento": "05-04-1998",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. (GDO. 11) RIVAS ESQUIROL CRISTIAN ANTONIO",
-    "fecha_nacimiento": "15-07-1992",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
+  {"nombre": "C.P.R. (GDO. 12) VALDES TAPIA JOSE DANIEL","fecha_nacimiento": "25-03-1955"},
+  
+  {"nombre": "SUBOFICIAL FARIAS CANALES CHRISTIAN BERNARDO","fecha_nacimiento": "20-08-1978"},
+  
+  {"nombre": "SARGENTO 1RO. FONSECA GUEVARA FRANCISCO JOSE","fecha_nacimiento": "04-10-1972"},
+  
+  {"nombre": "SARGENTO 1RO. FLORES VALENZUELA LUIS ARMANDO","fecha_nacimiento": "02-09-1973"},
+
+  {"nombre": "SARGENTO 2DO. FUENTES CASTRO JUAN ROBERTO","fecha_nacimiento": "05-11-1986"},
+ 
+  {"nombre": "SARGENTO 2DO. BAZAN ROJAS LEONARDO ENRIQUE","fecha_nacimiento": "25-04-1972"},
+  
+  {"nombre": "C.P.R. (GDO. 10) JARA ESPINOZA JOSE MANUEL","fecha_nacimiento": "19-10-1961"},
+ 
+  {"nombre": "CAPITAN (J) VIDAL BASSALETTI MARIA FERNANDA","fecha_nacimiento": "04-04-1986"},
+
+  {"nombre": "ADMINISTRATIVO (J) GDO. 12 JARA VASQUEZ XIMENA MARIA","fecha_nacimiento": "18-06-1975"},
+  
+  {"nombre": "C.P.R. (GDO. 12) GARRIDO CACERES ABEL ANTONIO","fecha_nacimiento": "16-10-1964"},
+  
+  {"nombre": "SUBOFICIAL CACERES CASTILLO CRISTIAN RODRIGO","fecha_nacimiento": "01-12-1980"},
+
+  {"nombre": "CABO 1RO. RUIZ LEIVA CARLOS ROBERTO","fecha_nacimiento": "22-12-1991"},
+ 
+  {"nombre": "C.P.R. (GDO. 12) RENCORET FARIAS ALEJANDRA PATRICIA","fecha_nacimiento": "18-01-1973"},
+  
+  {"nombre": "C.P.R. (GDO. 09) FLORES ALVARADO ELIZABETH DEL CARMEN","fecha_nacimiento": "16-12-1975"},
+  
+  {"nombre": "CORONEL RIFFO SAEZ JOSE LUIS","fecha_nacimiento": "10-08-1978"},
+
+  {"nombre": "CAPITAN MANCILLA ANDRADE ALFONSO ALEJANDRO","fecha_nacimiento": "03-11-1990"},
+  
+  {"nombre": "SARGENTO 2DO. CARDENAS CAMPOS WERNER PATRICIO","fecha_nacimiento": "03-04-1986"},
+ 
+  {"nombre": "C.P.R. (GDO. 09) SANTANDER POBLETE VERONICA ANDREA","fecha_nacimiento": "24-05-1984"},
+  
+  {"nombre": "CAPITAN CASTRO VARGAS JOSE GUILLERMO","fecha_nacimiento": "05-09-1971"},
+  
+  {"nombre": "SARGENTO 2DO. CANDIA VARGAS MAURICIO JAVIER","fecha_nacimiento": "18-05-1984"},
+ 
+  {"nombre": "SARGENTO 2DO. PACHECO SANDOVAL GERARDO ADOLFO","fecha_nacimiento": "29-04-1989"},
+  
+  {"nombre": "C.P.R. (ART. 37) BARISON EGERT FRANCISCO JAVIER","fecha_nacimiento": "07-03-1963"},
+  
+  {"nombre": "C.P.R. (GDO. 08) LOPEHANDIA VALDES ANDRES FELIPE","fecha_nacimiento": "18-10-1977"},
+ 
+  {"nombre": "C.P.R. (GDO. 10) MOREIRA MOREIRA CRISTIAN RODRIGO","fecha_nacimiento": "25-04-1977"},
+  
+  {"nombre": "CAPITAN INOSTROZA ESCOBAR CARLOS ANDRES","fecha_nacimiento": "01-12-1987"},
+  
+  {"nombre": "PROGRAMADOR (GDO. 09) HORMAZABAL VALLADARES CLAUDIO ANDRES","fecha_nacimiento": "21-04-1980"},
+  
+  {"nombre": "C.P.R. (GDO. 09) PONCE PICCARDO RAFAEL EMILIANO","fecha_nacimiento": "04-11-1947"},
+  
+  {"nombre": "C.P.R. (GDO. 12) RIOSECO RIOSECO DANILO ESTEBAN","fecha_nacimiento": "13-09-1988"},
+  
+  {"nombre": "CAPITAN RAMIREZ VEAS MIGUEL ANGEL","fecha_nacimiento": "04-07-1987"},
+  
+  {"nombre": "SARGENTO 2DO. ALARCON REYES ANIBAL ALEXCI","fecha_nacimiento": "02-09-1986"},
+  
+  {"nombre": "CABO 1RO. RIOS DIAZ FELIPE ANDRES","fecha_nacimiento": "23-08-1992"},
+  
+  {"nombre": "CABO 1RO. CASTILLO FIERRO RIGOBERTO ALFREDO","fecha_nacimiento": "19-12-1992"},
+  
+  {"nombre": "SARGENTO 2DO. MUNOZ GARCIA DARWIN HARRINSON","fecha_nacimiento": "22-09-1982"},
+  
+  {"nombre": "C.P.R. (ART. 37) LOPEZ COFRE JUAN CARLOS","fecha_nacimiento": "14-09-1980"},
+  
+  {"nombre": "C.P.R. (GDO. 09) URREA OLIVOS CHRISTOPHER GERARDO","fecha_nacimiento": "08-08-1978"},
+  
+  {"nombre": "C.P.R. (GDO. 09) ROJAS GOMEZ BERNARDO ANTONIO","fecha_nacimiento": "28-11-1987"},
+  
+  {"nombre": "C.P.R. (GDO. 11) VASQUEZ DELGADO JOSE IGNACIO","fecha_nacimiento": "05-04-1998"},
+  
+  {"nombre": "C.P.R. (GDO. 11) RIVAS ESQUIROL CRISTIAN ANTONIO","fecha_nacimiento": "15-07-1992"},
+
+
+
+
+  
   {
     "nombre": "CORONEL PEREIRA VASQUEZ GONZALO ARNOLDO",
     "fecha_nacimiento": "30-01-1974",
@@ -2552,18 +2252,10 @@
     "__4": "",
     "__5": ""
   },
+  {"nombre": "C.P.R. ING. CIVIL INDUSTRIAL (GDO. 09) ALVAREZ JARAMILLO CRISTOPHER FERNANDO","fecha_nacimiento": "11-12-1992"},
+  
   {
-    "nombre": "C.P.R. ING. CIVIL INDUSTRIAL (GDO. 09) ALVAREZ JARAMILLO CRISTOPHER FERNANDO",
-    "fecha_nacimiento": "11-12-1992",
-    "": "",
-    "__1": "",
-    "__2": "",
-    "__3": "",
-    "__4": "",
-    "__5": ""
-  },
-  {
-    "nombre": "C.P.R. TECNICO EN ELECTRICIDAD (ART. 37�) ACU�A CANALES FRANCISCO EDUARDO",
+    "nombre": "C.P.R. TECNICO EN ELECTRICIDAD (ART. 37) ACUNA CANALES FRANCISCO EDUARDO",
     "fecha_nacimiento": "21-01-1966",
     "": "",
     "__1": "",
