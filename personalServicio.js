@@ -3,7 +3,6 @@ function buscarServicios(data){
 }
 
 
-
 // ===========================================
 // 4. FUNCIÓN DE MOSTRAR HTML
 // ===========================================
@@ -14,24 +13,23 @@ function mostrarServicios(lista) {
     let html = '';
 
     if (lista.length === 0) {
-        html = '<p style="color:#666; padding: 10px;">No hay información de Personal de Servicio.</p>';
+        // Usa el estilo de p compartido con cumpleaños
+        html = '<p>No hay información de Personal de Servicio.</p>';
     } else {
-        html = '<ul style="list-style: none; padding-left: 0; margin-top: 10px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">';
+        // Se genera la lista <ul>, los estilos vendrán del CSS.
+        html = '<ul>'; 
         
         lista.forEach(item => {
-            // Verifica si el objeto tiene la clave "fecha" para usar un estilo diferente (título)
             if (item.fecha) {
-                // Estilo para la fecha/encabezado
-                html += `<li style="font-weight: bold; color: #088024; background-color: #e6ffe6; padding: 10px 15px; border-bottom: 1px solid #088024; margin-top: 10px;">${item.fecha}</li>`;
+                // Usa la clase para el encabezado (fecha), similar a .cumple-hoy
+                html += `<li class="service-date-header">${item.fecha}</li>`;
             } 
             // Si el objeto tiene información de personal, la muestra
             else if (item.dotacion && item.nombre && item.ip) {
-                // Estilo para el personal de servicio
-                const estilo = 'style="background: #fff; padding: 10px 15px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;"';
-                
-                html += `<li ${estilo}>
-                            <div><strong>${item.dotacion}:</strong> ${item.nombre}</div>
-                            <div style="font-style: italic; color: #555;">IP: ${item.ip}</div>
+                // IMPORTANTE: Estructura de dos SPAN similar a cumpleaños
+                html += `<li>
+                            <span><strong>${item.dotacion}:</strong> ${item.nombre}</span>
+                            <span>IP: ${item.ip}</span>
                         </li>`;
             }
         });
@@ -60,8 +58,9 @@ function cargarPersonalServicios() {
             console.error('Error:', error);
             const listado = document.getElementById('servicios-listado');
             if (listado) {
-                 // Corregir el mensaje de error:
-                 listado.innerHTML = '<p style="color:red; padding: 10px;">Error: No se pudo cargar la lista de **Personal de Servicio**. Verifique el archivo JSON y la ruta.</p>';}
+                 // Usa el estilo de p compartido con cumpleaños
+                 listado.innerHTML = '<p style="color:red; padding: 10px;">Error: No se pudo cargar la lista de **Personal de Servicio**. Verifique el archivo JSON y la ruta.</p>';
+            }
         });
 }
 

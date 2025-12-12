@@ -6,6 +6,7 @@
     max-width: 1200px; /* Ancho máximo para el contenido en pantallas grandes */
     margin: 20px auto;
     padding: 20px 0;
+    margin-top: 100px;
 }
 
 .grid-title {
@@ -19,9 +20,9 @@
 
 .main-content-grid {
     display: grid;
-    /* CAMBIO CLAVE: Permite 4 columnas. minmax(220px, 1fr) */
-    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    gap: 25px; /* Ligeramente reducido para ahorrar espacio */
+    /* CORRECCIÓN CLAVE: Aumentado minmax a 280px para asegurar un máximo de 4 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
     padding: 10px;
 }
 
@@ -32,7 +33,6 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    /* REDUCCIÓN DE TAMAÑO: Padding vertical más bajo */
     padding: 20px 15px; 
     background: var(--blanco);
     border-radius: 10px;
@@ -52,33 +52,30 @@
 
 /* Contenedor del Ícono */
 .card-icon-container {
-    /* REDUCCIÓN DE TAMAÑO: Ícono un poco más pequeño */
     width: 60px;
     height: 60px;
-    background-color: var(--verde);
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 10px; /* Margen reducido */
+    margin-bottom: 10px;
 }
 
 /* Estilo del Ícono */
 .card-icon {
-    /* REDUCCIÓN DE TAMAÑO: Fuente del ícono más pequeña */
     color: var(--blanco);
     font-size: 2rem;
 }
 
 .card-title {
-    font-size: 1.15rem; /* Fuente del título ligeramente reducida */
+    font-size: 1.15rem;
     font-weight: bold;
     margin-bottom: 5px;
     color: var(--texto);
 }
 
 .card-description {
-    font-size: 0.85rem; /* Fuente de la descripción más pequeña */
+    font-size: 0.85rem;
     color: #666;
     margin-top: 5px;
 }
@@ -98,8 +95,13 @@
     }
 }
 
-/* Estilos para el contenedor principal de la lista de cumpleaños */
-#cumpleanios-listado ul {
+/* ----------------------------------------------------------------- */
+/* --- ESTILOS PARA LISTADOS (CUMPLEAÑOS Y SERVICIOS) --- */
+/* ----------------------------------------------------------------- */
+
+/* Estilos del contenedor principal de la lista (Compartido) */
+#cumpleanios-listado ul,
+#servicios-listado ul {
     list-style: none; /* Elimina los puntos predeterminados de la lista */
     padding-left: 0;
     margin-top: 10px;
@@ -110,61 +112,81 @@
     box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Sombra sutil */
 }
 
-/* Estilos para cada elemento (cada persona) en la lista */
-#cumpleanios-listado li {
+/* Estilos para cada elemento (cada persona) en la lista (Compartido) */
+#cumpleanios-listado li,
+#servicios-listado li {
     padding: 10px 15px;
     border-bottom: 1px solid #eee; /* Separador sutil */
     display: flex; /* Para alinear el nombre a la izquierda y el mensaje a la derecha */
     justify-content: space-between;
+    align-items: center;
 }
 
-/* Elimina el borde inferior del último elemento */
-#cumpleanios-listado li:last-child {
+/* Elimina el borde inferior del último elemento (Compartido) */
+#cumpleanios-listado li:last-child,
+#servicios-listado li:last-child {
     border-bottom: none;
 }
 
 /* Estilo para los cumpleaños de HOY (resaltado) */
-/* NOTA: Este estilo es el que el JS debe aplicar condicionalmente */
 .cumple-hoy {
     font-weight: bold;
     color: var(--verde, #088024); /* Usa el color verde principal */
     background-color: #e6ffe6; /* Fondo verde claro para destacar */
 }
 
-/* Estilo para el mensaje de días restantes */
-#cumpleanios-listado li span {
+/* Estilo para el encabezado de fecha en Personal de Servicio (similar a .cumple-hoy) */
+.service-date-header {
+    font-weight: bold;
+    color: var(--verde, #088024);
+    background-color: #e6ffe6; /* Fondo verde claro para destacar */
+    padding: 10px 15px;
+    border-bottom: 1px solid var(--verde, #088024);
+    margin-top: 10px;
+    display: block; 
+}
+
+
+/* Estilo para el texto secundario (días restantes/detalle IP) (Compartido) */
+#cumpleanios-listado li span,
+#servicios-listado li span {
     font-weight: normal;
     color: #666; /* Texto secundario gris */
 }
 
-/* Estilo para el mensaje cuando no hay cumpleaños */
-#cumpleanios-listado p {
+/* Estilo para el mensaje cuando no hay datos (Compartido) */
+#cumpleanios-listado p,
+#servicios-listado p {
     color: #666;
     padding: 10px;
 }
 
-/* --- MEJORA ASPECTO MOVIL DE CUMPLEAÑOS --- */
+
+/* --- MEJORA ASPECTO MOVIL (Compartido) --- */
 
 @media (max-width: 600px) {
-    /* Ajuste de tipografía general para ahorrar espacio */
+    /* Ajuste de tipografía general para ahorrar espacio (Compartido) */
     #cumpleanios-listado, 
-    #cumpleanios-listado ul li {
-        font-size: 0.9em; /* Reduce ligeramente el tamaño de la letra */
+    #servicios-listado, 
+    #cumpleanios-listado ul li,
+    #servicios-listado ul li {
+        font-size: 0.9em; 
     }
 
-    /* Regla clave para que el nombre y el mensaje no se monten */
-    #cumpleanios-listado ul li {
-        display: flex; /* Convierte el LI en un contenedor flexible */
-        justify-content: space-between; /* Empuja el nombre a la izquierda y el mensaje a la derecha */
-        gap: 5px; /* Pequeño espacio entre los elementos */
+    /* Regla clave para que el nombre y el mensaje no se monten (Compartido) */
+    #cumpleanios-listado ul li,
+    #servicios-listado ul li {
+        display: flex; 
+        justify-content: space-between; 
+        gap: 5px; 
         align-items: center;
     }
     
-    /* Asegurar que el mensaje de fecha sea legible */
-    #cumpleanios-listado ul li span {
+    /* Asegurar que el mensaje de fecha sea legible (Compartido) */
+    #cumpleanios-listado ul li span,
+    #servicios-listado ul li span {
         text-align: right;
-        flex-shrink: 0; /* Evita que el mensaje se comprima */
-        /* Aseguramos que el texto del mensaje se mantenga horizontal */
+        flex-shrink: 0; 
         white-space: nowrap; 
     }
 }

@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="headerFooter.css">
 <link rel="stylesheet" href="accessCards.css">
+<link rel="stylesheet" href="menu.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <title>RR.HH. DIRTIC</title>
@@ -13,20 +14,19 @@
 
 </head>
 
-<body>
+<body id="top">
 <script src="include.js"></script>
-<script src="menu-toggle.js"></script>
 <div id="header-placeholder"></div>
 
 <main class="main-content">
-    <h2 class="grid-title" style="margin-top: 40px;"><i class="fas fa-computer"></i> Acceso a Plataformas</h2>
+    <h2 class="grid-title" style="margin-top: 40px;" id="plataformas"><i class="fas fa-computer"></i> Acceso a Plataformas</h2>
 
     <div class="main-content-grid">
 
 
         <a href="http://pantallausuario.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-                <i class="fas fa-toolbox card-icon"></i> 
+                <i class="fas fa-toolbox card-icon" style="color: #2E7D32;"></i> 
             </div>
             <h3 class="card-title">PUC</h3>
             <p class="card-description">Pantalla Usuario Carabineros.</p>
@@ -34,7 +34,7 @@
 
         <a href="https://relojvirtual.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-                <i class="fas fa-clock card-icon"></i> 
+                <i class="fas fa-clock card-icon" style="color: #9C27B0;"></i> 
             </div>
             <h3 class="card-title">Reloj Virtual</h3>
             <p class="card-description">Control de Asistencia.</p>
@@ -43,7 +43,7 @@
 
         <a href="http://doe.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-                <i class="fas fa-file-alt card-icon"></i> 
+                <i class="fas fa-file-alt card-icon" style="color: #D7CCC8;"></i> 
             </div>
             <h3 class="card-title">DOE</h3>
             <p class="card-description">Documentación Electrónica Institucional.</p>
@@ -51,7 +51,7 @@
 
         <a href="http://sistemariper.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-                <i class="fas fa-user-shield card-icon"></i> 
+                <i class="fas fa-user-shield card-icon" style="color: #F48FB1;"></i> 
             </div>
             <h3 class="card-title">RIPER</h3>
             <p class="card-description">Registro de Información del Personal.</p>
@@ -59,7 +59,7 @@
 
         <a href="http://siiper.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-                <i class="fas fa-users card-icon"></i> 
+                <i class="fas fa-users card-icon" style="color: #5C6BC0;"></i> 
             </div>
             <h3 class="card-title">SIIPER</h3>
             <p class="card-description">Sistema Integrado de Información Personal.</p>
@@ -67,7 +67,7 @@
 
         <a href="http://sigeaper.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-                <i class="fas fa-money-bill-wave card-icon"></i> 
+                <i class="fas fa-money-bill-wave card-icon" style="color: #2E7D32;"></i> 
             </div>
             <h3 class="card-title">SIGEAPER</h3>
             <p class="card-description">Sistema Integrado de Gestión Económica y Administrativa del Personal.</p>
@@ -75,7 +75,7 @@
 
         <a href="http://ferper.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-calendar-alt card-icon"></i> 
+            <i class="fas fa-calendar-alt card-icon" style="color: #26C6DA;"></i> 
             </div>
             <h3 class="card-title">FERPER</h3>
             <p class="card-description">Sistema de Feriados y Permisos</p>
@@ -83,7 +83,7 @@
 
         <a href="https://siaper.contraloria.cl/contenido/login-privado.html" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-university card-icon"></i> 
+            <i class="fas fa-university card-icon" style="color: #D7CCC8;"></i> 
             </div>
             <h3 class="card-title">SIAPER</h3>
             <p class="card-description">Sistema de Información y Control del Personal de la Administración del Estado.</p>
@@ -91,7 +91,7 @@
 
         <a href="http://sigpryma.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-exclamation-triangle card-icon"></i> 
+            <i class="fas fa-exclamation-triangle card-icon" style="color: #FFCA28;"></i> 
             </div>
             <h3 class="card-title">SIGPRYMA</h3>
             <p class="card-description">Sistema Integrado de Gestión en Prevención de Riesgos y Medio Ambiente.</p>
@@ -99,7 +99,7 @@
         
         <a href="https://cruizl91.github.io/calculadoraServicios/" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-calculator card-icon"></i> 
+            <i class="fas fa-calculator card-icon" style="color: #607D8B;"></i> 
             </div>
             <h3 class="card-title">CAS</h3>
             <p class="card-description">Calculadora de Años de Servicio</p>
@@ -107,7 +107,7 @@
 
         <a href="http://semepintranet.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-car card-icon"></i> 
+            <i class="fas fa-car card-icon" style="color: #4CAF50;"></i> 
             </div>
             <h3 class="card-title">SEMEP</h3>
             <p class="card-description">Sección de Mediciones Psicometricas</p>
@@ -115,7 +115,7 @@
 
         <a href="http://remuneraciones.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-receipt card-icon"></i> 
+            <i class="fas fa-receipt card-icon" style="color: #FF8F00;"></i> 
             </div>
             <h3 class="card-title">PORTAL P.9</h3>
             <p class="card-description">Portal Depto. Remuneraciones P.9.</p>
@@ -123,7 +123,7 @@
 
         <a href="http://gestionviaticos.carabineros.cl/" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-plane card-icon"></i> 
+            <i class="fas fa-plane card-icon" style="color: #2196F3;"></i> 
             </div>
             <h3 class="card-title">SIGEVIA</h3>
             <p class="card-description">Sistema Gestión de Viáticos.</p>
@@ -131,7 +131,7 @@
 
         <a href="http://10.78.201.84/plase/version/v1.3/index.php/login/" class="access-card" target="_blank">
             <div class="card-icon-container">
-            <i class="fas fa-notes-medical card-icon"></i> 
+            <i class="fas fa-notes-medical card-icon" style="color: #F44336;"></i> 
             </div>
             <h3 class="card-title">PLASE</h3>
             <p class="card-description">Sistema Personal Lesionado en Actos del Servicio.</p>
@@ -139,12 +139,12 @@
 
     </div>
 
-        <h2 class="grid-title" style="margin-top: 40px;"><i class="fas fa-circle-user"></i> Personal de Servicio</h2>
+        <h2 class="grid-title" style="margin-top: 40px;" id="personal-servicio"><i class="fas fa-circle-user"></i> Personal de Servicio</h2>
     <div id="servicios-listado">
         <p>Cargando lista de servicios...</p>
     </div>
 
-        <h2 class="grid-title" style="margin-top: 40px;"><i class="fas fa-birthday-cake"></i> Próximos Cumpleaños</h2>
+        <h2 class="grid-title" style="margin-top: 40px;" id="proximos-cumpleanos"><i class="fas fa-birthday-cake"></i> Próximos Cumpleaños</h2>
     <div id="cumpleanios-listado">
         <p>Cargando lista de cumpleaños...</p>
     </div>
@@ -156,5 +156,6 @@
 <script src="./fecha-hora.js"></script>
 <script src="./cumpleanos.js"></script>
 <script src="./personalServicio.js"></script>
+<script src="menu-toggle.js"></script>
 </body>
 </html>

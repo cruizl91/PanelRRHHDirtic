@@ -79,6 +79,14 @@ main {
 
 /* --- SECCIÓN DE HEADER PRINCIPAL (MANTENIDA) --- */
 .main-header {
+    /* --- PROPIEDADES AÑADIDAS PARA HACERLO FIJO --- */
+    position: fixed;        /* Fija el elemento a la ventana del navegador */
+    top: 0;                 /* Ancla a la parte superior */
+    left: 0;                /* Ancla a la izquierda */
+    right: 0;               /* Ancla a la derecha, asegurando que ocupe todo el ancho */
+    z-index: 990;           /* Asegura que esté por encima de casi todos los demás elementos */
+    /* --------------------------------------------------- */
+
     display: flex;
     justify-content: space-between;
     align-items: center;
