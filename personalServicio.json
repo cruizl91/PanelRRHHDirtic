@@ -1,8 +1,8 @@
 [
   {"fecha": "Desde el 12 al 19 de diciembre de 2025"},
 
-  {"dotacion": "Oficial Ayudantia", "nombre": "","ip": ""},
-  {"dotacion": "Oficial Operativo", "nombre": "","ip": ""},
+  {"dotacion": "Oficial Ayudantia", "nombre": "Capitan (I) Ortega Segura Pablo","ip": "25708"},
+  {"dotacion": "Oficial Operativo", "nombre": "Capitan Hernandez Gonzalez Mauricio","ip": "22391"},
   {"dotacion": "Suboficial Fiscalizador", "nombre": "Suboficial Mayor Aravena Fuenzalida Oscar","ip": "22286"},
   {"dotacion": "Suboficial Operativo", "nombre": "Suboficial Lema Gonzalez Andres","ip": "25726"},
   {"dotacion": "O.P.U. DIRTIC", "nombre": "Sgto. 1° (A/O) Flores Valenzuela Luis","ip": "22278"},
@@ -12,3 +12,4 @@
 
 
 ]
+
