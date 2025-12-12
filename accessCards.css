@@ -20,7 +20,7 @@
 
 .main-content-grid {
     display: grid;
-    /* CORRECCIÓN CLAVE: Aumentado minmax a 280px para asegurar un máximo de 4 columnas */
+    /* CORRECCIÓN: Aumentado minmax a 280px para asegurar un máximo de 4 columnas */
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 25px;
     padding: 10px;
@@ -81,7 +81,7 @@
 }
 
 
-/* --- RESPONSIVE ADICIONAL --- */
+/* --- RESPONSIVE ADICIONAL DE TARJETAS --- */
 @media (max-width: 600px) {
     .main-content {
         width: 100%;
@@ -147,7 +147,7 @@
 }
 
 
-/* Estilo para el texto secundario (días restantes/detalle IP) (Compartido) */
+/* Estilo para el texto secundario (días restantes/detalle IP) (Aplica a ambos SPAN en desktop) */
 #cumpleanios-listado li span,
 #servicios-listado li span {
     font-weight: normal;
@@ -162,7 +162,9 @@
 }
 
 
-/* --- MEJORA ASPECTO MOVIL (Compartido) --- */
+/* ----------------------------------------------------------------- */
+/* --- CORRECCIÓN CLAVE: MEJORA ASPECTO MOVIL (Compartido y Cuadrado) --- */
+/* ----------------------------------------------------------------- */
 
 @media (max-width: 600px) {
     /* Ajuste de tipografía general para ahorrar espacio (Compartido) */
@@ -173,7 +175,7 @@
         font-size: 0.9em; 
     }
 
-    /* Regla clave para que el nombre y el mensaje no se monten (Compartido) */
+    /* Regla CLAVE: Configura el LI como contenedor Flex (Compartido) */
     #cumpleanios-listado ul li,
     #servicios-listado ul li {
         display: flex; 
@@ -182,11 +184,33 @@
         align-items: center;
     }
     
-    /* Asegurar que el mensaje de fecha sea legible (Compartido) */
-    #cumpleanios-listado ul li span,
-    #servicios-listado ul li span {
-        text-align: right;
-        flex-shrink: 0; 
+    /* 1. Estilo para el contenido principal del Personal de Servicio (Nombre/Dotación) */
+    /* Permite el salto de línea para nombres largos */
+    #servicios-listado ul li > span:first-child {
+        white-space: normal; /* Permite el salto de línea (SOLO SERVICIOS) */
+        flex-grow: 1;      
+        min-width: 0;      
+        text-align: left;  
+    }
+    
+    /* 1b. Estilo para el contenido principal de Cumpleaños (Nombre) */
+    /* Asegura que el texto no salte de línea para que siempre se vea una lista limpia. */
+    #cumpleanios-listado ul li > span:first-child {
+        white-space: nowrap; /* Mantiene el texto en una sola línea (SOLO CUMPLEAÑOS) */
+        overflow: hidden;    /* Oculta si es demasiado largo */
+        text-overflow: ellipsis; /* Añade puntos suspensivos si es cortado */
+        flex-grow: 1;
+        min-width: 0; 
+        text-align: left;
+    }
+
+
+    /* 2. Estilo para el contenido secundario (IP/Días restantes) */
+    /* Lo mantiene fijo y en una sola línea (Compartido) */
+    #cumpleanios-listado ul li > span:nth-child(2),
+    #servicios-listado ul li > span:nth-child(2) {
+        text-align: right; 
+        flex-shrink: 0;    
         white-space: nowrap; 
     }
 }
