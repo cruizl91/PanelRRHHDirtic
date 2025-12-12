@@ -1,3 +1,9 @@
+/*
+================================================================================
+CSS CORREGIDO (Incluye separación entre secciones y visibilidad móvil del título)
+================================================================================
+*/
+
 /* --- ESTILOS PARA EL CONTENIDO PRINCIPAL DEL BODY (GRID DE TARJETAS) --- */
 
 .main-content {
@@ -6,13 +12,15 @@
     max-width: 1200px; /* Ancho máximo para el contenido en pantallas grandes */
     margin: 20px auto;
     padding: 20px 0;
+    /* Margen superior para compensar el header de escritorio (asume altura de 100px) */
     margin-top: 100px;
 }
 
 .grid-title {
     color: var(--texto);
     font-size: 2rem;
-    margin-bottom: 25px;
+    /* CORRECCIÓN 1: Aumentado el margen inferior para separar el título de su contenido inmediato */
+    margin-bottom: 40px; 
     border-bottom: 3px solid var(--verde);
     padding-bottom: 10px;
     font-weight: 300;
@@ -81,19 +89,22 @@
 }
 
 
-/* --- RESPONSIVE ADICIONAL DE TARJETAS --- */
-@media (max-width: 600px) {
-    .main-content {
-        width: 100%;
-        padding: 10px;
-        margin: 10px auto;
-    }
-    .main-content-grid {
-        /* Una sola columna en móviles pequeños */
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
+/* ----------------------------------------------------------------- */
+/* >>> REGLAS DE SEPARACIÓN ENTRE SECCIONES GRANDES (ESPACIO ENTRE TÍTULOS) <<< */
+/* ----------------------------------------------------------------- */
+
+/* 1. Separa el título "Personal de Servicio" del grid de tarjetas anterior */
+.main-content-grid + .grid-title {
+    margin-top: 50px; 
 }
+
+/* 2. Separa el título "Próximos Cumpleaños" del listado de servicios anterior */
+#servicios-listado + .grid-title {
+    margin-top: 50px; 
+}
+
+
+/* --- RESPONSIVE GENERAL Y LISTADOS --- */
 
 /* ----------------------------------------------------------------- */
 /* --- ESTILOS PARA LISTADOS (CUMPLEAÑOS Y SERVICIOS) --- */
@@ -163,10 +174,23 @@
 
 
 /* ----------------------------------------------------------------- */
-/* --- CORRECCIÓN CLAVE: MEJORA ASPECTO MOVIL (Compartido y Cuadrado) --- */
+/* --- MEDIA QUERY PARA MÓVILES (Ancho Máximo 600px) --- */
 /* ----------------------------------------------------------------- */
 
 @media (max-width: 600px) {
+    .main-content {
+        width: 100%;
+        /* CORRECCIÓN 3: Uso de PADDING-TOP aumentado (120px) para asegurar 
+           que el título NO quede oculto bajo el header fijo y expandido en móvil. */
+        padding: 120px 10px 10px 10px; 
+        margin: 0 auto; 
+    }
+    .main-content-grid {
+        /* Una sola columna en móviles pequeños */
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
     /* Ajuste de tipografía general para ahorrar espacio (Compartido) */
     #cumpleanios-listado, 
     #servicios-listado, 
@@ -185,7 +209,6 @@
     }
     
     /* 1. Estilo para el contenido principal del Personal de Servicio (Nombre/Dotación) */
-    /* Permite el salto de línea para nombres largos */
     #servicios-listado ul li > span:first-child {
         white-space: normal; /* Permite el salto de línea (SOLO SERVICIOS) */
         flex-grow: 1;      
@@ -194,7 +217,6 @@
     }
     
     /* 1b. Estilo para el contenido principal de Cumpleaños (Nombre) */
-    /* Asegura que el texto no salte de línea para que siempre se vea una lista limpia. */
     #cumpleanios-listado ul li > span:first-child {
         white-space: nowrap; /* Mantiene el texto en una sola línea (SOLO CUMPLEAÑOS) */
         overflow: hidden;    /* Oculta si es demasiado largo */
@@ -206,7 +228,6 @@
 
 
     /* 2. Estilo para el contenido secundario (IP/Días restantes) */
-    /* Lo mantiene fijo y en una sola línea (Compartido) */
     #cumpleanios-listado ul li > span:nth-child(2),
     #servicios-listado ul li > span:nth-child(2) {
         text-align: right; 
