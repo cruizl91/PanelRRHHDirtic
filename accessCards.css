@@ -1,8 +1,3 @@
-/*
-================================================================================
-CSS CORREGIDO (Incluye separación entre secciones y visibilidad móvil del título)
-================================================================================
-*/
 
 /* --- ESTILOS PARA EL CONTENIDO PRINCIPAL DEL BODY (GRID DE TARJETAS) --- */
 
@@ -29,7 +24,7 @@ CSS CORREGIDO (Incluye separación entre secciones y visibilidad móvil del tít
 .main-content-grid {
     display: grid;
     /* CORRECCIÓN: Aumentado minmax a 280px para asegurar un máximo de 4 columnas */
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     padding: 10px;
 }
@@ -72,7 +67,7 @@ CSS CORREGIDO (Incluye separación entre secciones y visibilidad móvil del tít
 /* Estilo del Ícono */
 .card-icon {
     color: var(--blanco);
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .card-title {
