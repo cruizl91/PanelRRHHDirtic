@@ -2,7 +2,7 @@
     {
         "dependencia": "DIRECCIÓN DE T.I.C.",
         "personal": [
-            {"grado": "General", "nombre": "Enrique Villarroel Valencia", "ip": "12345"}
+            {"grado": "General", "nombre": "Enrique Villarroel Valencia", "ip": "22271"}
         ]
     },
 
@@ -17,8 +17,8 @@
         "dependencia": "AYUDANTÍA",
         "personal": [
             {"grado": "Suboficial Mayor", "nombre": "Yolanda Hevia Salvo", "ip": "22272"},
-            {"grado": "Suboficial Mayor", "nombre": "Luis Ahumada Valdés", "ip": ""},
-            {"grado": "C.P.R. (GDO. 12)", "nombre": "José Valdés Tapia", "ip": ""}
+            {"grado": "Suboficial Mayor", "nombre": "Luis Ahumada Valdés", "ip": "25765"},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "José Valdés Tapia", "ip": "25765"}
         ]
     },
 
@@ -27,7 +27,7 @@
         "personal": [
             {"grado": "Suboficial", "nombre": "Christian Farías Canales", "ip": "22275"},
             {"grado": "Sargento 1° (A/O)", "nombre": "Luis Flores Valenzuela", "ip": "22278"},
-            {"grado": "Sargento 1° (S. Men)", "nombre": "Francisco Fonseca Guevara", "ip": ""},
+            {"grado": "Sargento 1° (S. Men)", "nombre": "Francisco Fonseca Guevara", "ip": "22276"},
             {"grado": "Sargento 2°", "nombre": "Juan Fuentes Castro", "ip": "22275"},
             {"grado": "Sargento 2° (A/O)", "nombre": "Leonardo Bazan Rojas", "ip": "22276"},
             {"grado": "C.P.R. (GDO. 10)", "nombre": "José Jara Espinoza", "ip": "22276"}
@@ -47,9 +47,9 @@
         {
         "dependencia": "ASESORÍA JURÍDICA",
         "personal": [
-            {"grado": "Capitán (J)", "nombre": "Maria Vidal Bassaletti", "ip": "25706"},
+            {"grado": "Capitán (J)", "nombre": "Maria Vidal Bassaletti", "ip": "25738"},
             {"grado": "P.N.S. Civil", "nombre": "Ximena Jara Vasquez", "ip": "25706"},
-            {"grado": "Cabo 1°", "nombre": "Alarcón", "ip": ""},
+            {"grado": "Cabo 1°", "nombre": "Alarcón", "ip": "25737"},
             {"grado": "C.P.R. (GDO. 12)", "nombre": "Abel Garrido Caceres", "ip": "25737"}
         ]
     },
@@ -80,34 +80,34 @@
         "dependencia": "ÁREA GESTIÓN ESTRATÉGICA",
         "personal": [
             {"grado": "Capitán", "nombre": "Carlos Inostroza Escobar", "ip": "22343"},
-            {"grado": "P.N.S. Civil", "nombre": "Claudio Hormazabal Valladares", "ip": ""},
-            {"grado": "C.P.R. (GDO. 09)", "nombre": "Rafael Ponce Piccardo", "ip": ""},
-            {"grado": "C.P.R. (GDO. 12)", "nombre": "Danilo Rioseco Rioseco", "ip": ""}
+            {"grado": "P.N.S. Civil", "nombre": "Claudio Hormazabal Valladares", "ip": "25258"},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Rafael Ponce Piccardo", "ip": "25268"},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "Danilo Rioseco Rioseco", "ip": "25267"}
         ]
     },
     {
         "dependencia": "OFICINA DE CIBERSEGURIDAD Y CONT. OPERACIONAL",
         "personal": [
-            {"grado": "Capitán", "nombre": "Miguel Ramirez Veas", "ip": ""},
-            {"grado": "Sargento 2°", "nombre": "Anibal Alarcón Reyes", "ip": ""},
-            {"grado": "Cabo 1°", "nombre": "Felipe Rios Diaz", "ip": ""},
-            {"grado": "Cabo 1°", "nombre": "Rigoberto Castillo Fierro", "ip": ""}
+            {"grado": "Capitán", "nombre": "Miguel Ramirez Veas", "ip": "25766"},
+            {"grado": "Sargento 2°", "nombre": "Anibal Alarcón Reyes", "ip": "25981"},
+            {"grado": "Cabo 1°", "nombre": "Felipe Rios Diaz", "ip": "26744"},
+            {"grado": "Cabo 1°", "nombre": "Rigoberto Castillo Fierro", "ip": "25980"}
         ]
     },
 
     {
         "dependencia": "ÁREA CIBERSEGURIDAD",
         "personal": [
-            {"grado": "Sargento 2°", "nombre": "Darwin Muñoz Garcia", "ip": ""},
-            {"grado": "C.P.R. (ART. 37°)", "nombre": "Juan Lopez Cofré", "ip": ""}
+            {"grado": "Sargento 2°", "nombre": "Darwin Muñoz Garcia", "ip": "22417"},
+            {"grado": "C.P.R. (ART. 37°)", "nombre": "Juan Lopez Cofré", "ip": "22320"}
         ]
     },
 
     {
         "dependencia": "ÁREA CONTINUIDAD OPERACIONAL",
         "personal": [
-            {"grado": "C.P.R. (GDO. 09)", "nombre": "Cristopher Urrea Olivos", "ip": ""},
-            {"grado": "C.P.R. (GDO. 09)", "nombre": "Bernardo Rojas Gomez", "ip": ""}
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Cristopher Urrea Olivos", "ip": "22323"},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Bernardo Rojas Gomez", "ip": "25757"}
         ]
     },
 
@@ -117,8 +117,116 @@
             {"grado": "C.P.R. (GDO. 11)", "nombre": "José Vasquez Delgado", "ip": ""},
             {"grado": "C.P.R. (GDO. 11)", "nombre": "Cristian Rivas Esquirol", "ip": ""}
         ]
-    }
+    },
 
-    
+    {
+        "dependencia": "DEPARTAMENTO ABASTECIMIENTO T.I.C.",
+        "personal": [
+            {"grado": "Teniente Coronel (I)", "nombre": "Alex Filippi Veliz", "ip": "25701"}
 
+        ]
+    },
+
+    {
+        "dependencia": "OFICINA DE PARTES ABASTECIMIENTO",
+        "personal": [
+            {"grado": "Sargento 1° (Sec)", "nombre": "Patricia Vallejos Pacheco", "ip": "25735"},
+            {"grado": "Sargento 2° (A/O)", "nombre": "Carol Cuevas Muñoz", "ip": "25742"},
+            {"grado": "C.P.R. (GDO. 13)", "nombre": "Gonzalo Godoy Moreno", "ip": "22344"}
+        ]
+    },
+
+
+    {
+        "dependencia": "OFICINA PRESUPUESTO",
+        "personal": [
+            {"grado": "P.N.S. Civil", "nombre": "Sara Mendoza Arteaga", "ip": "22283"},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Eduardo Peña Valdivia", "ip": "26816"}
+        ]
+    },
+
+    {
+        "dependencia": "SECCIÓN COMPRAS",
+        "personal": [
+            {"grado": "Capitán (I)", "nombre": "Joselyn Soto Sepúlveda", "ip": "25721"},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Claudia Aceituno Pérez", "ip": "22369"},
+            {"grado": "C.P.R. (S. Men)", "nombre": "Rosa Yañez Aravena", "ip": "25718"}
+        ]
+    },
+
+    {
+        "dependencia": "OFICINA COMPRAS",
+        "personal": [
+            {"grado": "Sargento 2°", "nombre": "Veronica Valencia Pinto", "ip": "25718"},
+            {"grado": "Sargento 2°", "nombre": "Pedro Torres Caceres", "ip": ""},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Marcela Castillo Plaza", "ip": "25700"},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Carmen Tapia Valladares", "ip": "25722"},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Jeanette Beltrán Gutiérrez", "ip": "25724"},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "Erickson Mena Cortés", "ip": "25732"},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "Karina Urra Escobar", "ip": "25722"},
+            {"grado": "C.P.R. (GDO. 14)", "nombre": "Fabian Vergara Suazo", "ip": "25722"}
+        ]
+    },
+
+    {
+        "dependencia": "SECCIÓN LOGÍSTICA",
+        "personal": [
+            {"grado": "Capitán", "nombre": "Mauricio Hernandez Gonzalez", "ip": "22391"},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "María Salinas Moyano", "ip": "25713"},
+            {"grado": "C.P.R. (GDO. 14)", "nombre": "Rosa Urbina Tejos", "ip": "25728"}
+           
+        ]
+    },
+
+    {
+        "dependencia": "SECCIÓN CONTRATOS",
+        "personal": [
+            {"grado": "Capitán (I)", "nombre": "Pablo Ortega Segura", "ip": "25708"}
+           
+        ]
+    }, 
+
+    {
+        "dependencia": "OFICINA CONTRATOS Y MULTAS",
+        "personal": [
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Amelia Urrea Gonzalez", "ip": "25740"},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Pablo Pefaur Caceres", "ip": "25733"}
+           
+        ]
+    }, 
+
+    {
+        "dependencia": "OFICINA FACTURACIÓN",
+        "personal": [
+            {"grado": "Cabo 1°", "nombre": "Alex Ulloa Ramírez", "ip": "25705"},
+            {"grado": "Cabo 1°", "nombre": "Fiorella Melendez Jeldres", "ip": "25734"},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Ingrid Inostroza Jara", "ip": "25736"},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Marina Marilef Reyes", "ip": "25710"},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "María Jara Espinoza", "ip": "25709"}
+           
+        ]
+    }, 
+
+    {
+        "dependencia": "OFICINA DE ALMACENAMIENTO Y DISTRIBUCIÓN",
+        "personal": [
+            {"grado": "Suboficial Mayor", "nombre": "Cesar Ibañez Navarro", "ip": "25712"},
+            {"grado": "Suboficial", "nombre": "Andrés Lema Gonzalez", "ip": "25726"},
+            {"grado": "Sargento 1°", "nombre": "Luis Morales Ruiz", "ip": "25725"},
+            {"grado": "Sargento 2°", "nombre": "Sebastián Yañez Merino", "ip": ""},
+            {"grado": "Sargento 2°", "nombre": "Sonnia Saez Ramírez", "ip": "25711"},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Francisca Urrutia Tello", "ip": "25703"}
+           
+        ]
+    }, 
+
+     {
+        "dependencia": "OFICINA GESTIÓN DE BIENES DE USO",
+        "personal": [
+            {"grado": "Suboficial Mayor", "nombre": "Andres Rivera Valdebenito", "ip": "25719"},
+            {"grado": "Suboficial Mayor", "nombre": "Victor Soto Duijvesteijn", "ip": "22354"},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Arquimides Larraguibel Solari", "ip": "25716"}
+           
+        ]
+    } 
 ]
