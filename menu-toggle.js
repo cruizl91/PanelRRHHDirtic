@@ -1,25 +1,17 @@
 /**
- * Inicializa la funcionalidad del menú sándwich, 
- * esperando que el contenido dinámico del header (header.html) sea cargado.
+ * Inicializa la funcionalidad del menú sándwich.
+ * Esta función es llamada por include.js cuando el header (header.html) es insertado.
  */
-function initMenu() {
+function initializeMenuToggle() { // <-- FUNCIÓN RENOMBRADA
     // 1. Referencias a los elementos del DOM
     const menuToggle = document.querySelector('.menu-toggle');
     const sideMenu = document.getElementById('main-nav');
     
-    // ----------------------------------------------------
-    // Verificación y Polling (La clave de la corrección)
-    // ----------------------------------------------------
     if (!menuToggle || !sideMenu) {
-        // Si los elementos no están presentes (debido a la carga asíncrona de include.js),
-        // intentamos inicializar de nuevo después de 100 milisegundos.
-        // Esto asegura que los listeners se adjunten SÓLO cuando el HTML esté listo.
-        console.warn("Elementos de menú no encontrados. Reintentando inicialización...");
-        setTimeout(initMenu, 100); 
+        console.error("No se pudieron encontrar los elementos del menú después de la carga del header.");
         return; 
     }
 
-    // Los elementos se han encontrado. Continuar con la inicialización.
     console.log("Menú inicializado correctamente.");
     const menuItems = sideMenu.querySelectorAll('.menu-item');
     
@@ -39,34 +31,38 @@ function initMenu() {
     // ----------------------------------------------------
     menuItems.forEach(item => {
         item.addEventListener('click', function(e) {
-            e.preventDefault();
-            
-            // Cierra el menú después de la selección
-            sideMenu.classList.remove('open');
-            menuToggle.setAttribute('aria-expanded', 'false');
-
-            // Obtiene el ID del destino (ej: #plataformas)
             const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
 
-            if (targetElement) {
-                // --- Cálculo del desplazamiento ---
+            // **CORRECCIÓN CLAVE:** Solo prevenimos la acción predeterminada
+            // (navegación) para los enlaces internos (los que empiezan con '#').
+            if (targetId.startsWith('#')) { 
+                e.preventDefault();
                 
-                // Obtiene la altura del encabezado fijo para calcular el offset
-                const headerHeight = document.querySelector('.main-header').offsetHeight;
-                
-                // Calcula la posición del destino menos la altura del encabezado fijo.
-                const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
-                
-                // Desplazamiento suave usando la API de scroll
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
+                // Cierra el menú después de la selección
+                sideMenu.classList.remove('open');
+                menuToggle.setAttribute('aria-expanded', 'false');
+
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // --- Cálculo del desplazamiento ---
+                    
+                    // Obtiene la altura del encabezado fijo para calcular el offset
+                    const headerHeight = document.querySelector('.main-header').offsetHeight;
+                    
+                    // Calcula la posición del destino menos la altura del encabezado fijo.
+                    const offsetPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+                    
+                    // Desplazamiento suave usando la API de scroll
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             }
+            // Si no empieza con '#', como "organigrama.html", se permite la navegación normal.
         });
     });
 }
 
-// Inicia el proceso de verificación e inicialización.
-initMenu();
+// No se llama a la función aquí; será llamada por include.js.

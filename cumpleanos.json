@@ -33,7 +33,7 @@
  
   {"nombre": "C.P.R. (GDO. 12) RENCORET FARIAS ALEJANDRA PATRICIA","fecha_nacimiento": "18-01-1973"},
   
-  {"nombre": "C.P.R. (GDO. 09) FLORES ALVARADO ELIZABETH","fecha_nacimiento": "16-12-1975"},
+  {"nombre": "C.P.R. (GDO. 09) FLORES ALVARADO ELIZABETH DEL CARMEN","fecha_nacimiento": "16-12-1975"},
   
   {"nombre": "CORONEL RIFFO SAEZ JOSE LUIS","fecha_nacimiento": "10-08-1978"},
 
@@ -69,7 +69,7 @@
   
   {"nombre": "CABO 1RO. RIOS DIAZ FELIPE ANDRES","fecha_nacimiento": "23-08-1992"},
   
-  {"nombre": "CABO 1RO. CASTILLO FIERRO RIGOBERTO","fecha_nacimiento": "19-12-1992"},
+  {"nombre": "CABO 1RO. CASTILLO FIERRO RIGOBERTO ALFREDO","fecha_nacimiento": "19-12-1992"},
   
   {"nombre": "SARGENTO 2DO. MUNOZ GARCIA DARWIN HARRINSON","fecha_nacimiento": "22-09-1982"},
   
@@ -2232,8 +2232,16 @@
     "__4": "",
     "__5": ""
   },
-  {"nombre": "CABO 1RO. VARGAS AGUILAR PABLO","fecha_nacimiento": "18-12-1989"},
-  
+  {
+    "nombre": "CABO 1RO. VARGAS AGUILAR PABLO NICOLAS",
+    "fecha_nacimiento": "18-12-1989",
+    "": "",
+    "__1": "",
+    "__2": "",
+    "__3": "",
+    "__4": "",
+    "__5": ""
+  },
   {
     "nombre": "CABO 1RO. CANALES SALGADO GUSTAVO ALFONSO",
     "fecha_nacimiento": "17-03-1992",

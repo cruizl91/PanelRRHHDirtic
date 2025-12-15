@@ -1,0 +1,43 @@
+[
+    {
+        "dependencia": "DIRECCIÓN DE T.I.C.",
+        "personal": [
+            {"grado": "General", "nombre": "Enrique Rogelio Villarroel Valencia", "ip": "12345"}
+        ]
+    },
+
+    {
+        "dependencia": "GABINETE TÉCNICO",
+        "personal": [
+            {"grado": "Coronel", "nombre": "José Luis Riffo Sáez", "ip": "12345"},
+            {"grado": "Sargento 1°", "nombre": "Werner Cardenas Campos", "ip": "26799"}
+        ]
+    },
+    {
+        "dependencia": "OFICINA DE CIBERSEGURIDAD Y CONT. OPERACIONAL",
+        "personal": [
+            {"grado": "Subteniente", "nombre": "Luis Bravo", "ip": "10.10.3.15"},
+            {"grado": "Sargento 2do.", "nombre": "Elena Castillo", "ip": "10.10.3.16"}
+        ]
+    },
+    {
+        "dependencia": "OFICINA DE PARTES ÚNICA",
+        "personal": [
+            {"grado": "Cabo 1ro.", "nombre": "Miguel Ángel Torres", "ip": "10.10.5.20"}
+        ]
+    },
+
+        {
+        "dependencia": "OFICINA GESTIÓN DE RECURSOS HUMANOS",
+        "personal": [
+            {"grado": "Suboficial", "nombre": "Cristian Cáceres Castillo", "ip": "22284"},
+            {"grado": "Cabo 1ro.", "nombre": "Carlos Ruiz Leiva", "ip": "25260"},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "Alejandra Rencoret Farías", "ip": "22284"},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Elizabeth Flores Alvarado", "ip": "25256"}
+        ]
+    }
+
+
+    
+
+]

@@ -1,0 +1,182 @@
+/* --- Variables y Estilos Base --- */
+/* (Depende de headerFooter.css para --verde, --blanco, --gris, --texto) */
+
+/* === 1. CENTRADO DEL BOTÓN VOLVER === */
+.back-button-container {
+    text-align: center; /* Centra elementos 'inline-block' (el botón) */
+    padding: 15px 0;
+}
+
+.back-button {
+    /* El estilo base ya está en el HTML, pero lo dejamos aquí como referencia si lo pasas al CSS */
+    display: inline-block;
+    margin: 0; /* Eliminamos el margin-bottom para que sea centrado horizontalmente */
+    padding: 12px 25px;
+    background-color: #e90808;
+    color: var(--blanco);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+.back-button:hover {
+    background-color: #df6464;
+}
+
+
+/* === 2. ESTILOS DE LA TABLA/LISTA DE PERSONAL === */
+
+/* Asegura que el contenedor principal se vea bien en esta página */
+#personal-detail-container {
+    padding: 30px;
+    background-color: var(--blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.personnel-display-title {
+    color: var(--verde);
+    font-size: 2rem;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid var(--gris);
+    font-weight: 600;
+}
+
+.personal-card {
+    background: none; 
+    border: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.funcionario-list {
+    border: 1px solid #ddd; /* Borde suave alrededor de la lista */
+    border-radius: 8px;
+    overflow: hidden; 
+}
+
+/* Encabezado de la lista (Grado, Nombre, IP) */
+.funcionario-header {
+    display: flex; /* Asegura el formato de columna */
+    justify-content: space-between;
+    background-color: #E8F5E9; 
+    color: var(--texto); /* Se asegura de que el texto del encabezado sea el color de texto (negro) */
+    font-weight: bold;
+    padding: 12px 10px; /* Reducimos el padding horizontal del contenedor principal */
+    border-bottom: 1px solid #ccc;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+/* Elemento individual de la lista */
+.funcionario-item {
+    display: flex; /* Asegura el formato de columna */
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 10px; /* Reducimos el padding horizontal del contenedor de la fila */
+    border-bottom: 1px solid #eee;
+    transition: background-color 0.2s;
+    font-size: 1rem;
+}
+
+.funcionario-item:hover {
+    background-color: #f9f9f9;
+}
+
+.funcionario-item:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.funcionario-item:last-child {
+    border-bottom: none;
+}
+
+/* === Distribución y Estilo de Columnas === */
+
+/* 1. GRADO: Color Negro y Negrita/Bold para que coincida con Nombre */
+.funcionario-header .grado, .funcionario-item .grado { 
+    width: 15%; /* Reducimos un poco el ancho para ganar espacio */
+    min-width: 50px; 
+    text-align: left; 
+    font-weight: 700;
+    color: var(--texto); /* Color negro */
+}
+.funcionario-header .nombre, .funcionario-item .nombre { 
+    flex-grow: 1; 
+    padding: 0 5px; /* REDUCCIÓN CLAVE: Bajamos de 10px a 5px */
+    text-align: left;
+}
+.funcionario-header .ip, .funcionario-item .ip { 
+    color: var(--texto); /* Color negro */
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    width: 15%; /* Mantenemos un ancho fijo */
+    min-width: 80px;
+    text-align: right;
+    font-weight: 700; /* Hacemos el texto más fuerte */
+}
+
+
+/* === Media Queries (Responsividad) === */
+
+@media (max-width: 768px) {
+    
+    #personal-detail-container {
+        padding: 15px;
+    }
+    
+    .personnel-display-title {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+    }
+    
+    /* En móviles, convertimos la fila a lista vertical (Grado, Nombre, IP apilados) */
+    .funcionario-header {
+        /* Ocultamos el encabezado de la tabla para ahorrar espacio vertical */
+        display: none;
+    }
+
+    .funcionario-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 15px;
+    }
+    
+    /* Restauramos la anchura completa para que ocupen todo el espacio verticalmente */
+    .funcionario-item .grado,
+    .funcionario-item .nombre,
+    .funcionario-item .ip {
+        width: 100%;
+        text-align: left; 
+        padding: 2px 0;
+        min-width: 0; /* Elimina la restricción de ancho mínimo */
+    }
+
+    /* Etiquetas para claridad en móvil (Esto hace que aparezcan separados y con label) */
+    .funcionario-item .grado::before { 
+        content: "Grado: "; 
+        font-weight: 500; 
+        color: #666;
+    }
+    .funcionario-item .ip::before { 
+        content: "IP: "; 
+        font-weight: 500; 
+        color: #666;
+    }
+    
+    .funcionario-item .nombre {
+        font-weight: bold; 
+        padding-top: 5px;
+        order: 1; /* Pone el nombre primero en el orden visual */
+    }
+    .funcionario-item .grado {
+        order: 2; /* Pone el grado segundo */
+    }
+    .funcionario-item .ip {
+        order: 3; /* Pone la IP al final */
+        font-size: 0.8rem;
+    }
+}

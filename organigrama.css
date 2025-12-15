@@ -1,0 +1,275 @@
+/* --- AJUSTE DE INTERACCIÓN CON HEADER/FOOTER --- */
+
+body {
+    /* Offset para el header fijo */
+    padding-top: 100px; 
+    
+    /* Eliminamos todo el padding horizontal del body para maximizar el espacio */
+    padding-left: 0; 
+    padding-right: 0;
+    
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    /* Evita el scroll horizontal forzado, permitiendo que el contenido fluya */
+    overflow-x: hidden; 
+}
+
+.main-content {
+    width: 100% !important; 
+    max-width: none !important;
+    margin: 0 auto !important;
+    padding: 20px 10px; 
+    /* Separación con el footer (Mantenida) */
+    padding-bottom: 80px; 
+}
+
+/* Base del Organigrama */
+.organigrama * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.organigrama ul {
+    /* Espaciado vertical compacto */
+    padding-top: 20px; 
+    position: relative;
+    text-align: center;
+    list-style-type: none;
+}
+
+.organigrama li {
+    /* Espaciado compacto */
+    padding: 20px 5px 0 5px; 
+    position: relative;
+    vertical-align: top;
+    display: inline-block; 
+}
+
+/* Estilo de los Nodos (Cajas) */
+.organigrama li a {
+    border: 1px solid #ddd; 
+    padding: 8px 12px; 
+    text-decoration: none;
+    color: #333;
+    background-color: #E8F5E9;
+    font-size: 12px; 
+    display: block;
+    border-radius: 5px;
+    min-width: 140px; 
+    min-height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease;
+}
+.organigrama li a:hover {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #388E3C;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.organigrama .nodo-principal {
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    border: 2px solid #388E3C;
+    padding: 10px 15px; 
+    font-size: 15px; 
+    min-width: 250px; 
+}
+
+
+/* --- Conexiones (Líneas) --- */
+/* Se utiliza #81C784 (verde claro) para las líneas por la estilización */
+
+/* Conexión vertical (UL::before - Baja desde el padre) */
+.organigrama ul ul::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #81C784; 
+    width: 0;
+    height: 20px; /* Altura principal de conexión */
+}
+
+/* Conexión horizontal (LI::before, LI::after - Une a los hermanos) */
+.organigrama li::before, .organigrama li::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 50%;
+    border-top: 1px solid #81C784;
+    width: 50%;
+    height: 20px; /* Altura principal de conexión */
+}
+.organigrama li::after{
+    right: auto;
+    left: 50%;
+    border-left: 1px solid #81C784;
+}
+
+/* Limpieza de bordes */
+.organigrama li:only-child::before, .organigrama li:only-child::after { border: none; }
+.organigrama li:only-child { padding-top: 0; }
+.organigrama li:first-child::before, .organigrama li:last-child::after{ border: 0 none; }
+.organigrama li:last-child::before{ 
+    border-right: 1px solid #81C784; 
+    border-radius: 0 5px 0 0; 
+}
+.organigrama li:first-child::after{ 
+    border-radius: 5px 0 0 0; 
+}
+
+
+/* --- CORRECCIÓN CLAVE: LIMPIEZA DE LÍNEAS INTERNAS (ESTRUCTURAS VERTICALES) --- */
+
+/* 1. Limpia todos los pseudo-elementos LI de estructuras columnares/verticales */
+.nivel-3-col li::before, .nivel-3-col li::after,
+.nivel-4-vertical li::before, .nivel-4-vertical li::after,
+.columna-operaciones-mant > ul li::before, .columna-operaciones-mant > ul li::after,
+.columna-operaciones-serv > ul li::before, .columna-operaciones-serv > ul li::after,
+.nivel-4-secciones > li > ul > li::before, .nivel-4-secciones > li > ul > li::after { 
+    /* Elimina las líneas horizontales y los segmentos de unión */
+    border: none !important; 
+    /* Asegura que no haya padding residual */
+    padding: 0;
+}
+
+/* 2. Ajusta la altura de la línea vertical que baja a estas estructuras internas (15px para más compacto) */
+.nivel-4-secciones > li > ul { 
+    padding-top: 15px; 
+} 
+.nivel-4-secciones > li > ul::before { 
+    height: 15px; 
+}
+
+
+/* --- DISTRIBUCIÓN HORIZONTAL Y VERTICAL (Mantenida) --- */
+
+/* 1. Gabinetes (Nivel 2 Superior) - Horizontal en dos columnas flexibles */
+.nivel-2-superior {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding-top: 40px; 
+    width: 100%; 
+}
+.nivel-2-superior > li {
+    flex-basis: 49%; 
+    padding: 20px 5px 0 5px; 
+    display: inline-block; 
+}
+.columna-vertical-gab {
+    width: 100%; 
+    min-width: auto; 
+}
+
+
+/* 2. Departamentos (Nivel 2 Inferior) - Horizontal en tres columnas flexibles */
+.nivel-2-inferior {
+    display: flex; 
+    justify-content: center;
+    flex-wrap: nowrap; 
+    margin-top: 60px; 
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+.nivel-2-inferior::before {
+    /* Línea de conexión desde la Dirección */
+    content: '';
+    position: absolute;
+    top: -60px; 
+    left: 50%;
+    border-left: 1px solid #81C784;
+    width: 0;
+    height: 60px; 
+}
+.nivel-2-inferior > li {
+    display: inline-block; 
+    flex-basis: 33.33%; 
+    padding: 20px 5px 0 5px; 
+    width: auto; 
+    min-width: 0;
+}
+/* Reestablece la conexión horizontal entre los departamentos */
+.nivel-2-inferior > li::before, .nivel-2-inferior > li::after {
+    border-top: 1px solid #81C784;
+}
+
+
+/* --- Estructuras Internas de Columna Vertical (Gabinetes) --- */
+.nivel-3-col li {
+    display: block;
+    width: 100%;
+    padding: 15px 0 0 0; 
+}
+.nivel-3-col ul::before {
+    left: 50%;
+    border-left: 1px solid #81C784;
+    height: 15px; 
+}
+.nodo-vertical {
+    padding-top: 15px !important; 
+}
+.nivel-4-vertical {
+    display: block;
+    padding-top: 15px; 
+}
+.nivel-4-vertical::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    border-left: 1px solid #81C784;
+    width: 0;
+    height: 15px; 
+}
+.nivel-4-vertical li {
+    display: block;
+    width: 100%;
+    padding: 8px 0 0 0; 
+}
+
+
+/* --- AJUSTES DE DEPARTAMENTOS (OFICINA DE PARTES Y SECCIONES) --- */
+
+.nivel-3-dep-proyecto, .nivel-3-dep-abastecimiento, .nivel-3-dep-operaciones {
+    display: flex; 
+    justify-content: center;
+    padding-top: 20px; 
+}
+.nivel-4-secciones {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+    padding-top: 20px; 
+}
+
+.nivel-4-secciones > li {
+    flex-basis: 49%; 
+    padding: 0 5px; 
+}
+.columna-departamento:nth-child(3) .nivel-4-secciones > li {
+    flex-basis: 33%; 
+    padding: 0 5px;
+}
+.columna-operaciones-mant, .columna-operaciones-serv {
+    padding: 15px 5px 0 5px; 
+}
+
+/* Línea de bajada manual (Conecta Oficina de Partes/Presupuesto con Secciones) */
+.columna-departamento::after {
+    content: '';
+    position: absolute;
+    top: 100px; 
+    left: 50%;
+    border-left: 1px solid #81C784;
+    height: 20px; 
+    width: 0;
+}
