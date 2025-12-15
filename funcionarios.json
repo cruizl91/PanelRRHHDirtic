@@ -2,28 +2,35 @@
     {
         "dependencia": "DIRECCIÓN DE T.I.C.",
         "personal": [
-            {"grado": "General", "nombre": "Enrique Rogelio Villarroel Valencia", "ip": "12345"}
+            {"grado": "General", "nombre": "Enrique Villarroel Valencia", "ip": "12345"}
+        ]
+    },
+
+        {
+        "dependencia": "GABINETE DIRTIC",
+        "personal": [
+            {"grado": "Coronel", "nombre": "Pablo Lastra Mendoza", "ip": "22273"}
+        ]
+    },
+
+        {
+        "dependencia": "AYUDANTÍA",
+        "personal": [
+            {"grado": "Suboficial Mayor", "nombre": "Yolanda Hevia Salvo", "ip": "22272"},
+            {"grado": "Suboficial Mayor", "nombre": "Luis Ahumada Valdés", "ip": ""},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "José Valdés Tapia", "ip": ""}
         ]
     },
 
     {
-        "dependencia": "GABINETE TÉCNICO",
+        "dependencia": "OFICINA DE PARTES GABINETE",
         "personal": [
-            {"grado": "Coronel", "nombre": "José Luis Riffo Sáez", "ip": "12345"},
-            {"grado": "Sargento 1°", "nombre": "Werner Cardenas Campos", "ip": "26799"}
-        ]
-    },
-    {
-        "dependencia": "OFICINA DE CIBERSEGURIDAD Y CONT. OPERACIONAL",
-        "personal": [
-            {"grado": "Subteniente", "nombre": "Luis Bravo", "ip": "10.10.3.15"},
-            {"grado": "Sargento 2do.", "nombre": "Elena Castillo", "ip": "10.10.3.16"}
-        ]
-    },
-    {
-        "dependencia": "OFICINA DE PARTES ÚNICA",
-        "personal": [
-            {"grado": "Cabo 1ro.", "nombre": "Miguel Ángel Torres", "ip": "10.10.5.20"}
+            {"grado": "Suboficial", "nombre": "Christian Farías Canales", "ip": "22275"},
+            {"grado": "Sargento 1° (A/O)", "nombre": "Luis Flores Valenzuela", "ip": "22278"},
+            {"grado": "Sargento 1° (S. Men)", "nombre": "Francisco Fonseca Guevara", "ip": ""},
+            {"grado": "Sargento 2°", "nombre": "Juan Fuentes Castro", "ip": "22275"},
+            {"grado": "Sargento 2° (A/O)", "nombre": "Leonardo Bazan Rojas", "ip": "22276"},
+            {"grado": "C.P.R. (GDO. 10)", "nombre": "José Jara Espinoza", "ip": "22276"}
         ]
     },
 
@@ -31,12 +38,86 @@
         "dependencia": "OFICINA GESTIÓN DE RECURSOS HUMANOS",
         "personal": [
             {"grado": "Suboficial", "nombre": "Cristian Cáceres Castillo", "ip": "22284"},
-            {"grado": "Cabo 1ro.", "nombre": "Carlos Ruiz Leiva", "ip": "25260"},
+            {"grado": "Cabo 1°", "nombre": "Carlos Ruiz Leiva", "ip": "25260"},
             {"grado": "C.P.R. (GDO. 12)", "nombre": "Alejandra Rencoret Farías", "ip": "22284"},
             {"grado": "C.P.R. (GDO. 09)", "nombre": "Elizabeth Flores Alvarado", "ip": "25256"}
         ]
-    }
+    },
 
+        {
+        "dependencia": "ASESORÍA JURÍDICA",
+        "personal": [
+            {"grado": "Capitán (J)", "nombre": "Maria Vidal Bassaletti", "ip": "25706"},
+            {"grado": "P.N.S. Civil", "nombre": "Ximena Jara Vasquez", "ip": "25706"},
+            {"grado": "Cabo 1°", "nombre": "Alarcón", "ip": ""},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "Abel Garrido Caceres", "ip": "25737"}
+        ]
+    },
+
+
+    {
+        "dependencia": "GABINETE TÉCNICO",
+        "personal": [
+            {"grado": "Coronel", "nombre": "José Luis Riffo Sáez", "ip": "25764"},
+            {"grado": "Capitán", "nombre": "Alfonso Mancilla Andrade", "ip": "26798"},
+            {"grado": "Sargento 1°", "nombre": "Werner Cardenas Campos", "ip": "26799"},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Verónica Santander Poblete", "ip": "26817"}
+        ]
+    },
+    {
+        "dependencia": "ÁREA GESTIÓN PORTAFOLIO",
+        "personal": [
+            {"grado": "Capitán", "nombre": "José Cástro Vargas", "ip": "25767"},
+            {"grado": "Sargento 2°", "nombre": "Mauricio Candia Vargas", "ip": "26800"},
+            {"grado": "Sargento 2°", "nombre": "Gerardo Pacheco Sandoval", "ip": "26801"},
+            {"grado": "C.P.R. (ART. 37°)", "nombre": "Francisco Barison Egert", "ip": "26802"},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Eshirlen Soto Romero", "ip": "25707"},
+            {"grado": "C.P.R. (GDO. 10)", "nombre": "Cristian Moreira Moreira", "ip": "25744"}
+        ]
+    },
+
+    {
+        "dependencia": "ÁREA GESTIÓN ESTRATÉGICA",
+        "personal": [
+            {"grado": "Capitán", "nombre": "Carlos Inostroza Escobar", "ip": "22343"},
+            {"grado": "P.N.S. Civil", "nombre": "Claudio Hormazabal Valladares", "ip": ""},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Rafael Ponce Piccardo", "ip": ""},
+            {"grado": "C.P.R. (GDO. 12)", "nombre": "Danilo Rioseco Rioseco", "ip": ""}
+        ]
+    },
+    {
+        "dependencia": "OFICINA DE CIBERSEGURIDAD Y CONT. OPERACIONAL",
+        "personal": [
+            {"grado": "Capitán", "nombre": "Miguel Ramirez Veas", "ip": ""},
+            {"grado": "Sargento 2°", "nombre": "Anibal Alarcón Reyes", "ip": ""},
+            {"grado": "Cabo 1°", "nombre": "Felipe Rios Diaz", "ip": ""},
+            {"grado": "Cabo 1°", "nombre": "Rigoberto Castillo Fierro", "ip": ""}
+        ]
+    },
+
+    {
+        "dependencia": "ÁREA CIBERSEGURIDAD",
+        "personal": [
+            {"grado": "Sargento 2°", "nombre": "Darwin Muñoz Garcia", "ip": ""},
+            {"grado": "C.P.R. (ART. 37°)", "nombre": "Juan Lopez Cofré", "ip": ""}
+        ]
+    },
+
+    {
+        "dependencia": "ÁREA CONTINUIDAD OPERACIONAL",
+        "personal": [
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Cristopher Urrea Olivos", "ip": ""},
+            {"grado": "C.P.R. (GDO. 09)", "nombre": "Bernardo Rojas Gomez", "ip": ""}
+        ]
+    },
+
+    {
+        "dependencia": "CENTRO DE OPERACIONES DE SEGURIDAD (SOC)",
+        "personal": [
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "José Vasquez Delgado", "ip": ""},
+            {"grado": "C.P.R. (GDO. 11)", "nombre": "Cristian Rivas Esquirol", "ip": ""}
+        ]
+    }
 
     
 
