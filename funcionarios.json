@@ -225,7 +225,7 @@
                 "fecha_nacimiento": "30-01-1974",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "DEPARTAMENTO OPERACIONES T.I.C.",
-                "ip": ""
+                "ip": "22334"
             }
         ]
     },
@@ -240,7 +240,7 @@
                 "fecha_nacimiento": "15-10-1973",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "DEPARTAMENTO PROYECTOS T.I.C.",
-                "ip": ""
+                "ip": "25747"
             }
         ]
     },
@@ -340,7 +340,7 @@
                 "fecha_nacimiento": "29-08-1964",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": ""
+                "ip": "20000"
             },
             {
                 "grado": "SARGENTO 1°",
@@ -350,7 +350,7 @@
                 "fecha_nacimiento": "16-05-1987",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": ""
+                "ip": "22300"
             },
             {
                 "grado": "SARGENTO 1° (TELEF.)",
@@ -360,7 +360,7 @@
                 "fecha_nacimiento": "03-04-1985",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": ""
+                "ip": "20000"
             },
             {
                 "grado": "SARGENTO 2°",
@@ -430,7 +430,7 @@
                 "fecha_nacimiento": "22-06-1981",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": ""
+                "ip": "20000"
             }
         ]
     },
@@ -445,7 +445,7 @@
                 "fecha_nacimiento": "31-08-1978",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA APLICACIONES Y BASES DE DATOS",
-                "ip": ""
+                "ip": "25274"
             },
             {
                 "grado": "SARGENTO 2°",
@@ -475,7 +475,7 @@
                 "fecha_nacimiento": "06-11-1992",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA APLICACIONES Y BASES DE DATOS",
-                "ip": ""
+                "ip": "22399"
             },
             {
                 "grado": "C.P.R. (ART. 37º)",
@@ -980,7 +980,7 @@
                 "fecha_nacimiento": "25-10-1990",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "OFICINA DE PARTES PROYECTOS",
-                "ip": ""
+                "ip": "27451"
             },
             {
                 "grado": "C.P.R. (GDO. 11)",
@@ -990,16 +990,16 @@
                 "fecha_nacimiento": "24-08-1963",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "OFICINA DE PARTES PROYECTOS",
-                "ip": ""
+                "ip": "22329"
             },
             {
-                "grado": "C.P.R. (GDO. 11)",
-                "codigo": "970804-H",
-                "nombre": "Godoy Miranda Rommy",
-                "rut": "10142831-1",
-                "fecha_nacimiento": "30-11-1964",
+                "grado": "C.P.R. (GDO. 13)",
+                "codigo": "003494-R",
+                "nombre": "Vera Vega Heidy",
+                "rut": "12149936-3",
+                "fecha_nacimiento": "16-02-1973",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
-                "dependencia": "OFICINA DE PARTES PROYECTOS",
+                "dependencia": "OFICINA GESTIÓN DE PROYECTOS",
                 "ip": ""
             },
             {
@@ -1010,7 +1010,7 @@
                 "fecha_nacimiento": "20-03-1989",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "OFICINA DE PARTES PROYECTOS",
-                "ip": ""
+                "ip": "27454"
             }
         ]
     },
@@ -1243,16 +1243,6 @@
                 "nombre": "Canales Montenegro Maria",
                 "rut": "07061311-5",
                 "fecha_nacimiento": "04-06-1958",
-                "departamento": "DEPTO. PROYECTOS T.I.C.",
-                "dependencia": "OFICINA GESTIÓN DE PROYECTOS",
-                "ip": ""
-            },
-            {
-                "grado": "C.P.R. (GDO. 13)",
-                "codigo": "003494-R",
-                "nombre": "Vera Vega Heidy",
-                "rut": "12149936-3",
-                "fecha_nacimiento": "16-02-1973",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "OFICINA GESTIÓN DE PROYECTOS",
                 "ip": ""
