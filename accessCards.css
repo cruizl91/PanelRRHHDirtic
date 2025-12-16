@@ -1,3 +1,130 @@
+/* ================================================= */
+/* --- ESTILOS PARA EL BLOQUE DE CUMPLEAÑOS DE HOY --- */
+/* ================================================= */
+
+/* La tarjeta principal que contiene el mensaje festivo */
+.cumpleanios-hoy-card {
+    background: linear-gradient(145deg, #FFD700 0%, #FF8C00 100%); /* Dorado/Naranja vibrante */
+    color: #333; /* Texto oscuro para contraste */
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.5); /* Sombra festiva */
+    text-align: center;
+    width: 90%; /* Asegura que no ocupe todo el ancho del contenedor */
+    max-width: 800px;
+    margin: 0 auto; /* Centrar la tarjeta */
+    border: 4px solid #FFFFFF; /* Borde blanco grueso */
+    position: relative;
+    overflow: hidden; /* Oculta el confeti que se salga */
+    animation: pulseGlow 2s infinite alternate;
+}
+
+/* Animación sutil de confeti (estático) */
+.cumpleanios-hoy-card::before, .cumpleanios-hoy-card::after {
+    content: '🎉 🥳 🎈 🎁 🌟 🎂';
+    position: absolute;
+    font-size: 1.5rem;
+    line-height: 1;
+    opacity: 0.8;
+    color: #FF1493; /* Rosa fuerte */
+}
+
+.cumpleanios-hoy-card::before {
+    content: '🎉 🥳 🎈'; 
+    position: absolute;
+    top: 5px; 
+    left: 10px;
+    font-size: 2rem; 
+    line-height: 1;
+    opacity: 0.8;
+    color: #FF1493; /* Rosa fuerte */
+    transform: rotate(-10deg);
+    z-index: 10;
+    pointer-events: none; /* Asegura que no interfiera con clics */
+}
+
+.cumpleanios-hoy-card::after {
+content: '🎁 🎂 🥳'; 
+    position: absolute;
+    bottom: 5px; 
+    right: 10px;
+    font-size: 1.8rem; 
+    line-height: 1;
+    opacity: 0.8;
+    color: #4B0082; /* Púrpura para contraste */
+    transform: rotate(10deg);
+    z-index: 10;
+    pointer-events: none;
+}
+
+
+/* Título principal */
+.hoy-titulo {
+    font-size: 1.6em;
+    font-weight: 900;
+    letter-spacing: 2px;
+    display: block;
+    margin: 5px 0 15px;
+    color: #4B0082; /* Púrpura oscuro para el texto principal */
+    text-shadow: 1px 1px 0 #FFF, 2px 2px 0 #FFD700; /* Sombra de texto divertida */
+}
+
+/* Contenedor de la lista de funcionarios */
+.hoy-listado {
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 2px solid rgba(255, 255, 255, 0.5);
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente blanco para el listado */
+    border-radius: 8px;
+}
+
+/* Grado y Nombre del funcionario */
+.hoy-funcionario {
+    font-weight: 700;
+    color: #E91E63; /* Rosa de celebración */
+}
+
+/* ================================================= */
+/* --- ESTILOS DE PRÓXIMOS CUMPLEAÑOS (MEJORAS) --- */
+/* ================================================= */
+
+/* Hace el nombre y el mensaje más legibles y estilizados */
+#cumpleanios-listado ul li span:first-child {
+    font-weight: normal;
+    color: #333;
+}
+
+#cumpleanios-listado ul li span:last-child {
+    font-weight: 400;
+    color: #333;
+    font-style: italic;
+    min-width: 150px; /* Asegura espacio para el mensaje */
+    text-align: right;
+}
+
+/* Media Query para móvil */
+@media (max-width: 600px) {
+    .cumpleanios-hoy-card {
+        padding: 15px 20px;
+        width: 100%;
+        border-radius: 5px;
+    }
+    .hoy-titulo {
+        font-size: 1.3em;
+        margin: 5px 0 10px;
+    }
+    .hoy-listado {
+        font-size: 1em;
+    }
+    .fa-birthday-cake {
+        font-size: 1.2em;
+    }
+}
+
+
 
 /* --- ESTILOS PARA EL CONTENIDO PRINCIPAL DEL BODY (GRID DE TARJETAS) --- */
 
@@ -98,9 +225,6 @@
     margin-top: 50px; 
 }
 
-
-/* --- RESPONSIVE GENERAL Y LISTADOS --- */
-
 /* ----------------------------------------------------------------- */
 /* --- ESTILOS PARA LISTADOS (CUMPLEAÑOS Y SERVICIOS) --- */
 /* ----------------------------------------------------------------- */
@@ -121,6 +245,7 @@
 /* Estilos para cada elemento (cada persona) en la lista (Compartido) */
 #cumpleanios-listado li,
 #servicios-listado li {
+ 
     padding: 10px 15px;
     border-bottom: 1px solid #eee; /* Separador sutil */
     display: flex; /* Para alinear el nombre a la izquierda y el mensaje a la derecha */
@@ -138,18 +263,13 @@
 .cumple-hoy {
     font-weight: bold;
     color: var(--verde, #088024); /* Usa el color verde principal */
-    background-color: #e6ffe6; /* Fondo verde claro para destacar */
+  background-color: #e6ffe6; /* Fondo verde claro para destacar */
 }
 
 /* Estilo para el encabezado de fecha en Personal de Servicio (similar a .cumple-hoy) */
 .service-date-header {
     font-weight: bold;
     color: var(--verde, #088024);
-    background-color: #e6ffe6; /* Fondo verde claro para destacar */
-    padding: 10px 15px;
-    border-bottom: 1px solid var(--verde, #088024);
-    margin-top: 10px;
-    display: block; 
 }
 
 
@@ -157,7 +277,7 @@
 #cumpleanios-listado li span,
 #servicios-listado li span {
     font-weight: normal;
-    color: #666; /* Texto secundario gris */
+    color: #333; /* Texto secundario gris */
 }
 
 /* Estilo para el mensaje cuando no hay datos (Compartido) */
@@ -213,6 +333,7 @@
     
     /* 1b. Estilo para el contenido principal de Cumpleaños (Nombre) */
     #cumpleanios-listado ul li > span:first-child {
+        font-weight: normal;
         white-space: nowrap; /* Mantiene el texto en una sola línea (SOLO CUMPLEAÑOS) */
         overflow: hidden;    /* Oculta si es demasiado largo */
         text-overflow: ellipsis; /* Añade puntos suspensivos si es cortado */
@@ -229,4 +350,6 @@
         flex-shrink: 0;    
         white-space: nowrap; 
     }
+
+ 
 }

@@ -1,4 +1,5 @@
 const DIAS_ANTICIPACION = 7; 
+const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
 // ===========================================
 // 1. FUNCIÓN DE FORMATO (Mayúscula Inicial)
@@ -11,209 +12,196 @@ function formatearNombre(nombre) {
     return formatoTitulo;
 }
 
+// Función formatearGrado se mantuvo, aunque no se usa en este código para este archivo, 
+// se mantiene por si se usa en otro contexto.
+function formatearGrado(grado) {
+    if (!grado || typeof grado !== 'string') return '';
+    const minusculas = grado.toLowerCase();
+    // Reemplaza el inicio de cada palabra con su versión en mayúscula
+    const formatoTitulo = minusculas.replace(/\b[a-z\u00C0-\u017F]/g, char => char.toUpperCase());
+    return formatoTitulo;
+}
+
 // ===========================================
-// NUEVA FUNCIÓN: 1.5. FUNCIÓN DE CÁLCULO DE EDAD
+// 2. FUNCIÓN DE PARSEO DE FECHA
 // ===========================================
-function calcularEdad(fechaNacimiento) {
+// Convierte la cadena "DD-MM-YYYY" a un objeto Date válido.
+function parsearFecha(fechaStr) {
+    if (!fechaStr || typeof fechaStr !== 'string' || fechaStr.length < 10) {
+        return null;
+    }
+    const partes = fechaStr.split('-');
+    
+    if (partes.length !== 3) {
+        return null; 
+    }
+    
+    const dia = parseInt(partes[0], 10);
+    const mes = parseInt(partes[1], 10) - 1; // JS usa meses base 0
+    const anio = parseInt(partes[2], 10);
+    
+    const fecha = new Date(anio, mes, dia);
+
+    if (isNaN(fecha.getTime())) {
+        return null; 
+    }
+
+    return fecha;
+}
+
+// ===========================================
+// 3. FUNCIÓN DE CÁLCULO DE EDAD
+// ===========================================
+function calcularEdad(fechaNacimientoDate) {
     const hoy = new Date();
-    // El argumento fechaNacimiento debe ser un objeto Date
-    const nacimiento = fechaNacimiento;
+    const nacimiento = fechaNacimientoDate;
     
     let edad = hoy.getFullYear() - nacimiento.getFullYear();
-    const mes = hoy.getMonth() - nacimiento.getMonth();
+    const mesDiff = hoy.getMonth() - nacimiento.getMonth();
 
-    // Si aún no ha pasado el mes de su cumpleaños o si es el mes pero el día de hoy es menor.
-    if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+    if (mesDiff < 0 || (mesDiff === 0 && hoy.getDate() < nacimiento.getDate())) {
         edad--;
     }
     return edad;
 }
 
 
-const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
-const colorVerde = '#4CAF50'; 
-
 // ===========================================
-// 2. FUNCIÓN DE BÚSQUEDA Y LÓGICA DE FECHAS (MODIFICADA)
+// 4. FUNCIÓN PRINCIPAL DE BÚSQUEDA Y LÓGICA
 // ===========================================
 function buscarCumpleanios(data) {
     const hoy = new Date();
     hoy.setHours(0, 0, 0, 0); 
     
-    const cumpleaniosHoy = []; // NUEVA: Almacena los cumpleañeros de hoy
-    const cumpleaniosProximos = [];
+    const listadoCumpleanios = [];
 
-    data.forEach(persona => {
+    data.forEach(dependenciaObj => {
+        if (!dependenciaObj.personal) return;
         
-        // --- 1. VALIDACIÓN Y CORRECCIÓN DD-MM-YYYY ---
-        const fechaOriginal = persona.fecha_nacimiento; 
-        if (!fechaOriginal || typeof fechaOriginal !== 'string' || persona.nombre === null) return;
-        
-        const partesFecha = fechaOriginal.split('-'); 
-        if (partesFecha.length !== 3) return;
+        dependenciaObj.personal.forEach(funcionario => {
+            
+            const fechaNacimientoStr = funcionario.fecha_nacimiento; 
+            const nacimiento = parsearFecha(fechaNacimientoStr);
+            
+            if (!nacimiento) {
+                return; 
+            }
+            
+            const nacimientoMes = nacimiento.getMonth();
+            const nacimientoDia = nacimiento.getDate();
+            
+            let cumpleaniosActual = new Date(hoy.getFullYear(), nacimientoMes, nacimientoDia);
+            cumpleaniosActual.setHours(0, 0, 0, 0); 
 
-        // Convierte a formato estándar MM/DD/YYYY
-        // partesFecha[1] = mes, partesFecha[0] = dia, partesFecha[2] = año
-        const fechaEstandar = partesFecha[1] + '/' + partesFecha[0] + '/' + partesFecha[2];
-        const fechaNacimiento = new Date(fechaEstandar);
+            // Si el cumpleaños ya pasó este año, se establece para el próximo año
+            if (cumpleaniosActual.getTime() < hoy.getTime()) {
+                cumpleaniosActual.setFullYear(hoy.getFullYear() + 1);
+            }
 
-        if (isNaN(fechaNacimiento)) return; // Salta si la fecha es inválida
-        
-        const nombreFormateado = formatearNombre(persona.nombre);
-        
-        // ===========================================
-        // NUEVA LÓGICA: IDENTIFICAR CUMPLEAÑOS DE HOY
-        // ===========================================
-        const diaNacimiento = fechaNacimiento.getDate();
-        const mesNacimiento = fechaNacimiento.getMonth(); // 0-11
-        
-        if (hoy.getDate() === diaNacimiento && hoy.getMonth() === mesNacimiento) {
-            const edad = calcularEdad(fechaNacimiento);
-            cumpleaniosHoy.push({
-                nombre: nombreFormateado,
-                edad: edad
-            });
-            return; // Saltar el resto del bucle ya que fue capturado como cumpleaños de hoy.
-        }
-        // ===========================================
-        
-        
-        // --- 2. PREPARACIÓN DE FECHA DE CUMPLEAÑOS (Lógica de próximos) ---
-        const cumpleaniosEsteAnio = new Date(hoy.getFullYear(), fechaNacimiento.getMonth(), fechaNacimiento.getDate());
-        cumpleaniosEsteAnio.setHours(0, 0, 0, 0);
+            // Cálculo de la diferencia de días
+            const msPorDia = 1000 * 60 * 60 * 24;
+            let diferenciaDias = Math.ceil((cumpleaniosActual.getTime() - hoy.getTime()) / msPorDia);
 
-        // Si el cumpleaños ya pasó este año, lo calcula para el próximo.
-        if (cumpleaniosEsteAnio < hoy) {
-            cumpleaniosEsteAnio.setFullYear(hoy.getFullYear() + 1);
-        }
-        
-        // --- 3. CÁLCULO DE DÍAS Y FILTRADO ---
-        const diffTime = Math.abs(cumpleaniosEsteAnio.getTime() - hoy.getTime());
-        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            if (diferenciaDias > 365) {
+                diferenciaDias = diferenciaDias - 365;
+            }
 
-        // Solo se agrega si está dentro del rango de anticipación (y no es hoy, lo cual ya se excluyó)
-        if (diffDays <= DIAS_ANTICIPACION) {
-             const dia = cumpleaniosEsteAnio.getDate();
-             const mesIndex = cumpleaniosEsteAnio.getMonth();
-             const mesNombre = meses[mesIndex];
-             // Usamos item.dias para el estilo. diffDays será 0 si es hoy.
-             const mensaje = `Cumpleaños en ${diffDays} día${diffDays !== 1 ? 's' : ''} (${dia} de ${mesNombre})`;
-             
-             cumpleaniosProximos.push({
-                 nombre: nombreFormateado,
-                 fecha: cumpleaniosEsteAnio,
-                 dias: diffDays, // Debe ser 0 si es hoy, pero la lógica de arriba ya lo excluye
-                 mensaje: mensaje
-             });
-        }
+            // Solo incluimos si está dentro del rango (hoy o próximos DIAS_ANTICIPACION)
+            if (diferenciaDias <= DIAS_ANTICIPACION) {
+                
+                // La edad futura es la edad actual + 1 si el cumpleaños no es hoy
+                const edadFutura = calcularEdad(nacimiento) + (diferenciaDias === 0 ? 0 : 1);
+                
+                let mensaje = `Cumple el ${nacimientoDia} de ${meses[nacimientoMes]}`;
+                
+                if (diferenciaDias === 0) {
+                    mensaje = `¡CUMPLEAÑOS HOY! ${edadFutura} años`;
+                } else if (diferenciaDias === 1) {
+                    mensaje += ` (Mañana)`;
+                } else {
+                    mensaje += ` (en ${diferenciaDias} días)`;
+                }
+
+                listadoCumpleanios.push({
+                    nombre: formatearNombre(funcionario.nombre),
+                    dias: diferenciaDias,
+                    mensaje: mensaje,
+                    dependencia: dependenciaObj.dependencia, 
+                    grado: funcionario.grado,
+                    edad: edadFutura // La edad ya está aquí
+                });
+            }
+        });
     });
 
-    // 4. ORDENAR Y RENDERIZAR
-    cumpleaniosProximos.sort((a, b) => a.dias - b.dias);
-    
-    // LLAMADA A LAS NUEVAS FUNCIONES DE RENDERIZADO
-    mostrarCumpleaniosDeHoy(cumpleaniosHoy);
-    
-    // Llamada a la función original de próximos cumpleaños
-    mostrarCumpleaniosProximos(cumpleaniosProximos);
+    // Ordenar: Hoy (0), Mañana (1), y luego por días restantes
+    listadoCumpleanios.sort((a, b) => a.dias - b.dias);
+
+    // Mostrar el listado
+    mostrarListado(listadoCumpleanios);
 }
 
 // ===========================================
-// NUEVA FUNCIÓN: 4.5. FUNCIÓN DE RENDERIZADO DE CUMPLEAÑOS DE HOY
+// 5. FUNCIÓN DE MOSTRAR EL LISTADO EN HTML
 // ===========================================
-function mostrarCumpleaniosDeHoy(cumpleaniosHoy) {
-    const contenedor = document.getElementById('cumpleanios-hoy-container');
-    if (!contenedor) return;
-
-    let html = '';
-    const colorGrisClaro = '#F5F5F5'; // Un tono gris muy claro
-    const colorTextoGrisOscuro = '#757575'; // Para el texto
-
-    if (cumpleaniosHoy.length > 0) {
-        // Hay cumpleaños hoy
-        html += `<div style="
-            background-color: ${colorGrisClaro}; 
-            padding: 15px; 
-            border-radius: 8px; 
-            max-width: 80%; /* Para que se centre bien */
-            margin: 0 auto 20px auto; 
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Sutil sombra */
-        ">`;
-        
-        html += `<h3 style="
-            margin: 0 0 10px 0; 
-            color: ${colorTextoGrisOscuro}; 
-            font-size: 1.2em;
-        "><i class="fas fa-cake-candles" style="color: #FFC107;"></i> Cumpleaños de Hoy</h3>`;
-        
-        html += '<ul style="list-style: none; padding: 0; margin: 0;">';
-        
-        cumpleaniosHoy.forEach(persona => {
-            html += `<li style="
-                margin-bottom: 5px; 
-                color: ${colorTextoGrisOscuro};
-                font-size: 1.1em;
-            ">
-                <strong style="font-weight: bold;">${persona.nombre}</strong> cumple <span style="font-weight: bold;">${persona.edad} años</span>.
-            </li>`;
-        });
-        
-        html += '</ul>';
-        html += '</div>';
-
-    } else {
-        // No hay cumpleaños hoy
-        html += `<p style="
-            background-color: ${colorGrisClaro};
-            padding: 10px;
-            border-radius: 8px;
-            max-width: 80%;
-            margin: 0 auto;
-            color: ${colorTextoGrisOscuro}; 
-            font-weight: bold; 
-        ">
-            Cumpleaños de Hoy: Ninguno
-        </p>`;
-    }
-
-    contenedor.innerHTML = html;
-}
-
-// ===========================================
-// 4. FUNCIÓN DE RENDERIZADO DE PRÓXIMOS CUMPLEAÑOS (Original, renombrada para claridad)
-// ===========================================
-function mostrarCumpleaniosProximos(cumpleaniosProximos) {
+function mostrarListado(listado) {
     const contenedor = document.getElementById('cumpleanios-listado');
-    if (!contenedor) return;
+    const hoyContainer = document.getElementById('cumpleanios-hoy-container');
+    
+    if (!contenedor || !hoyContainer) return;
 
-    let html = '';
+    let htmlProximos = '';
+    const cumpleaniosHoy = listado.filter(item => item.dias === 0);
+    // Filtrar los cumpleaños de hoy de la lista de Próximos Cumpleaños
+    const proximosCumpleanios = listado.filter(item => item.dias > 0); 
+    
+    // 5.1. Mostrar mensaje de cumpleaños de HOY (bloque superior)
+    if (cumpleaniosHoy.length > 0) {
+        let mensajeHoy = cumpleaniosHoy.map(item => 
+            // CORRECCIÓN: Se añade item.edad entre paréntesis al listado superior
+            `<span class="hoy-funcionario">${item.grado ? item.grado + ' ' : ''}${item.nombre} (${item.edad} años)</span><br>`
+        ).join('');
 
-    if (cumpleaniosProximos.length === 0) {
-        html = '<p style="padding: 10px 15px;">No hay próximos cumpleaños dentro de los ' + DIAS_ANTICIPACION + ' días.</p>';
+        hoyContainer.innerHTML = `
+            <div class="cumpleanios-hoy-card">
+                <span class="hoy-titulo">¡FELIZ CUMPLEAÑOS!</span>
+                <div class="hoy-listado">
+                    ${mensajeHoy}
+                </div>
+            </div>
+        `;
     } else {
-        html = '<ul class="cumpleanios-list">';
-        cumpleaniosProximos.forEach(item => {
-            // La lógica de 'item.dias === 0' ya no debería usarse, ya que el cumpleaños de hoy se maneja por separado.
-            // Mantenemos la lógica original por si el día 0 aún se pasa por algún caso, aunque en principio `diffDays` será >= 1.
-            const estilo = item.dias === 0 ? `style="font-weight: bold; color: ${colorVerde}; background-color: #e6ffe6; padding: 10px 15px; border-bottom: 1px solid #eee;"` : 'style="background: #fff; padding: 10px 15px; border-bottom: 1px solid #eee;"';
-            
-            // Nota: Aquí se usa item.mensaje, que ya incluye el formato de fecha (DD de mes)
-            html += `<li ${estilo}>${item.nombre} <span>${item.mensaje}</span></li>`;
-        });
-        html += '</ul>';
+         hoyContainer.innerHTML = '';
     }
 
-    contenedor.innerHTML = html;
+    // 5.2. Mostrar lista de Próximos Cumpleaños
+    if (proximosCumpleanios.length === 0) {
+        htmlProximos = '<p style="padding: 10px; text-align: center; color: #666;">No hay próximos cumpleaños en los siguientes 7 días.</p>';
+    } else {
+        htmlProximos = '<ul style="list-style-type: none; padding: 0; margin: 0;">';
+        proximosCumpleanios.forEach(item => {
+            // Muestra Grado y Nombre, sin la dependencia.
+            const nombreCompleto = `${item.grado ? item.grado + ' ' : ''}${item.nombre}`;
+
+            htmlProximos += `<li style="background: #fff; padding: 10px 15px; border-bottom: 1px solid #eee;">
+                                 <span>${nombreCompleto}</span> 
+                                 <span>${item.mensaje}</span>
+                             </li>`;
+        });
+        htmlProximos += '</ul>';
+    }
+
+    contenedor.innerHTML = htmlProximos;
 }
 
 // ===========================================
-// 5. FUNCIÓN PRINCIPAL DE CARGA DE DATOS
+// 6. FUNCIÓN PRINCIPAL DE CARGA DE DATOS
 // ===========================================
 function cargarDatosCumpleanios() {
-    fetch('cumpleanos.json') 
+    fetch('funcionarios.json') 
         .then(response => {
             if (!response.ok) {
-                throw new Error('Error al cargar cumpleanos.json: ' + response.statusText);
+                throw new Error('Error al cargar funcionarios.json: ' + response.statusText);
             }
             return response.json();
         })
@@ -224,10 +212,10 @@ function cargarDatosCumpleanios() {
             console.error('Error:', error);
             const listado = document.getElementById('cumpleanios-listado');
             if (listado) {
-                 listado.innerHTML = '<p style="color:red; padding: 10px 15px;">No se pudo cargar la lista de cumpleaños.</p>';
+                 listado.innerHTML = `<p style="color: red; padding: 10px;">Error al cargar los datos: ${error.message}. Revise la consola del navegador.</p>`;
             }
         });
 }
 
-// Ejecución al cargar el script
+// Iniciar la carga de datos al cargar la página
 document.addEventListener('DOMContentLoaded', cargarDatosCumpleanios);
