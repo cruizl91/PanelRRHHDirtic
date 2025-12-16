@@ -925,7 +925,7 @@
                 "fecha_nacimiento": "21-09-1989",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA DE PARTES OPERACIONES",
-                "ip": ""
+                "ip": "22388"
             },
             {
                 "grado": "SARGENTO 2°",
@@ -935,7 +935,7 @@
                 "fecha_nacimiento": "03-09-1986",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA DE PARTES OPERACIONES",
-                "ip": ""
+                "ip": "22324"
             },
             {
                 "grado": "SARGENTO 2°",
@@ -945,7 +945,7 @@
                 "fecha_nacimiento": "18-01-1984",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA DE PARTES OPERACIONES",
-                "ip": ""
+                "ip": "22324"
             },
             {
                 "grado": "SARGENTO 2°",
@@ -955,7 +955,17 @@
                 "fecha_nacimiento": "07-02-1990",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA DE PARTES OPERACIONES",
-                "ip": ""
+                "ip": "22389"
+            },
+            {
+                "grado": "CABO 1°",
+                "codigo": "001748-L",
+                "nombre": "Poblete Cea Dayana",
+                "rut": "17931678-1",
+                "fecha_nacimiento": "06-07-1991",
+                "departamento": "DEPTO. OPERACIONES T.I.C.",
+                "dependencia": "TALLERES T.I.C.",
+                "ip": "22324"
             }
         ]
     },
@@ -2751,17 +2761,8 @@
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "TALLERES T.I.C.",
                 "ip": ""
-            },
-            {
-                "grado": "CABO 1°",
-                "codigo": "001748-L",
-                "nombre": "Poblete Cea Dayana",
-                "rut": "17931678-1",
-                "fecha_nacimiento": "06-07-1991",
-                "departamento": "DEPTO. OPERACIONES T.I.C.",
-                "dependencia": "TALLERES T.I.C.",
-                "ip": ""
             }
+
         ]
     },
     {
