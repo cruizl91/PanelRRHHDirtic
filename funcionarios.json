@@ -185,7 +185,7 @@
                 "fecha_nacimiento": "05-04-1998",
                 "departamento": "DIRECCION T.I.C.",
                 "dependencia": "CENTRO DE OPERACIONES DE SEGURIDAD (SOC)",
-                "ip": ""
+                "ip": "25980"
             },
             {
                 "grado": "C.P.R. (GDO. 11)",
@@ -195,7 +195,7 @@
                 "fecha_nacimiento": "15-07-1992",
                 "departamento": "DIRECCION T.I.C.",
                 "dependencia": "CENTRO DE OPERACIONES DE SEGURIDAD (SOC)",
-                "ip": ""
+                "ip": "25980"
             }
         ]
     },
@@ -1660,7 +1660,7 @@
                 "fecha_nacimiento": "13-08-1989",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "SECCIÓN DESARROLLO",
-                "ip": ""
+                "ip": "25980"
             },
             {
                 "grado": "TENIENTE",
