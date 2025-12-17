@@ -1600,7 +1600,7 @@
         ]
     },
     {
-        "dependencia": "SECCION COMPRAS",
+        "dependencia": "SECCIÓN COMPRAS",
         "personal": [
             {
                 "grado": "C.P.R. (GDO. 13)",
@@ -1609,14 +1609,9 @@
                 "rut": "10065389-3",
                 "fecha_nacimiento": "21-01-1964",
                 "departamento": "DEPTO. ABASTECIMIENTO T.I.C.",
-                "dependencia": "SECCION COMPRAS",
+                "dependencia": "SECCIÓN COMPRAS",
                 "ip": "25718"
-            }
-        ]
-    },
-    {
-        "dependencia": "SECCIÓN COMPRAS",
-        "personal": [
+            },
             {
                 "grado": "CAPITAN (I)",
                 "codigo": "979719-P",
