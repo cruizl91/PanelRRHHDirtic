@@ -226,6 +226,16 @@
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "DEPARTAMENTO OPERACIONES T.I.C.",
                 "ip": "22334"
+            },
+            {
+                "grado": "CAPITAN",
+                "codigo": "989641-C",
+                "nombre": "Parra Sierra Nicolas",
+                "rut": "16321963-8",
+                "fecha_nacimiento": "09-04-1986",
+                "departamento": "DEPTO. OPERACIONES T.I.C.",
+                "dependencia": "DEPARTAMENTO OPERACIONES T.I.C.",
+                "ip": "22381"
             }
         ]
     },
@@ -240,7 +250,7 @@
                 "fecha_nacimiento": "15-10-1973",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "DEPARTAMENTO PROYECTOS T.I.C.",
-                "ip": "25747"
+                "ip": ""
             }
         ]
     },
@@ -340,7 +350,7 @@
                 "fecha_nacimiento": "29-08-1964",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": "20000"
+                "ip": ""
             },
             {
                 "grado": "SARGENTO 1°",
@@ -350,7 +360,7 @@
                 "fecha_nacimiento": "16-05-1987",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": "22300"
+                "ip": ""
             },
             {
                 "grado": "SARGENTO 1° (TELEF.)",
@@ -360,7 +370,7 @@
                 "fecha_nacimiento": "03-04-1985",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": "20000"
+                "ip": ""
             },
             {
                 "grado": "SARGENTO 2°",
@@ -430,7 +440,7 @@
                 "fecha_nacimiento": "22-06-1981",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "MESA DE AYUDA",
-                "ip": "20000"
+                "ip": ""
             }
         ]
     },
@@ -438,14 +448,14 @@
         "dependencia": "OFICINA APLICACIONES Y BASES DE DATOS",
         "personal": [
             {
-                "grado": "P.N.S CIVIL",
+                "grado": "P.N.S. CIVIL",
                 "codigo": "964509-F",
                 "nombre": "Vasquez Tobar Ximena",
                 "rut": "13440515-5",
                 "fecha_nacimiento": "31-08-1978",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA APLICACIONES Y BASES DE DATOS",
-                "ip": "25274"
+                "ip": ""
             },
             {
                 "grado": "SARGENTO 2°",
@@ -468,14 +478,14 @@
                 "ip": ""
             },
             {
-                "grado": "CABO 1°",
-                "codigo": "996996-G",
-                "nombre": "Caroca Valenzuela Hanz",
-                "rut": "18227019-9",
-                "fecha_nacimiento": "06-11-1992",
+                "grado": "CARABINERO",
+                "codigo": "017176-N",
+                "nombre": "Riquelme Perez Francisco",
+                "rut": "20146202-9",
+                "fecha_nacimiento": "10-05-1999",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA APLICACIONES Y BASES DE DATOS",
-                "ip": "22399"
+                "ip": ""
             },
             {
                 "grado": "C.P.R. (ART. 37º)",
@@ -683,11 +693,11 @@
                 "ip": ""
             },
             {
-                "grado": "CARABINERO",
-                "codigo": "017176-N",
-                "nombre": "Riquelme Perez Francisco",
-                "rut": "20146202-9",
-                "fecha_nacimiento": "10-05-1999",
+                "grado": "CABO 1°",
+                "codigo": "996996-G",
+                "nombre": "Caroca Valenzuela Hanz",
+                "rut": "18227019-9",
+                "fecha_nacimiento": "06-11-1992",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
                 "dependencia": "OFICINA DATA CENTER",
                 "ip": ""
@@ -964,7 +974,7 @@
                 "rut": "17931678-1",
                 "fecha_nacimiento": "06-07-1991",
                 "departamento": "DEPTO. OPERACIONES T.I.C.",
-                "dependencia": "TALLERES T.I.C.",
+                "dependencia": "OFICINA DE PARTES OPERACIONES",
                 "ip": "22324"
             }
         ]
@@ -980,7 +990,7 @@
                 "fecha_nacimiento": "25-10-1990",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "OFICINA DE PARTES PROYECTOS",
-                "ip": "27451"
+                "ip": ""
             },
             {
                 "grado": "C.P.R. (GDO. 11)",
@@ -990,16 +1000,16 @@
                 "fecha_nacimiento": "24-08-1963",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "OFICINA DE PARTES PROYECTOS",
-                "ip": "22329"
+                "ip": ""
             },
             {
-                "grado": "C.P.R. (GDO. 13)",
-                "codigo": "003494-R",
-                "nombre": "Vera Vega Heidy",
-                "rut": "12149936-3",
-                "fecha_nacimiento": "16-02-1973",
+                "grado": "C.P.R. (GDO. 11)",
+                "codigo": "970804-H",
+                "nombre": "Godoy Miranda Rommy",
+                "rut": "10142831-1",
+                "fecha_nacimiento": "30-11-1964",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
-                "dependencia": "OFICINA GESTIÓN DE PROYECTOS",
+                "dependencia": "OFICINA DE PARTES PROYECTOS",
                 "ip": ""
             },
             {
@@ -1010,7 +1020,7 @@
                 "fecha_nacimiento": "20-03-1989",
                 "departamento": "DEPTO. PROYECTOS T.I.C.",
                 "dependencia": "OFICINA DE PARTES PROYECTOS",
-                "ip": "27454"
+                "ip": ""
             }
         ]
     },
@@ -1248,6 +1258,16 @@
                 "ip": ""
             },
             {
+                "grado": "C.P.R. (GDO. 13)",
+                "codigo": "003494-R",
+                "nombre": "Vera Vega Heidy",
+                "rut": "12149936-3",
+                "fecha_nacimiento": "16-02-1973",
+                "departamento": "DEPTO. PROYECTOS T.I.C.",
+                "dependencia": "OFICINA GESTIÓN DE PROYECTOS",
+                "ip": ""
+            },
+            {
                 "grado": "C.P.R. (GDO. 11)",
                 "codigo": "981907-Q",
                 "nombre": "Novoa Sanchez Lorena",
@@ -1393,7 +1413,7 @@
         "dependencia": "OFICINA PRESUPUESTO",
         "personal": [
             {
-                "grado": "P.N.S CIVIL",
+                "grado": "P.N.S. CIVIL",
                 "codigo": "958698-N",
                 "nombre": "Mendoza Arteaga Sara",
                 "rut": "12493970-4",
@@ -1418,7 +1438,7 @@
         "dependencia": "OFICINA PROGRAMACIÓN",
         "personal": [
             {
-                "grado": "P.N.S CIVIL",
+                "grado": "P.N.S. CIVIL",
                 "codigo": "977048-G",
                 "nombre": "Brito Orellana Marcelo",
                 "rut": "13756405-K",
@@ -1658,7 +1678,7 @@
                 "ip": ""
             },
             {
-                "grado": "P.N.S CIVIL",
+                "grado": "P.N.S. CIVIL",
                 "codigo": "023207-U",
                 "nombre": "Inostroza Maureira Francisco",
                 "rut": "15696727-0",
@@ -1848,7 +1868,7 @@
         "dependencia": "SECCIÓN INGENIERÍA",
         "personal": [
             {
-                "grado": "CAPITAN ",
+                "grado": "CAPITAN",
                 "codigo": "987469-W",
                 "nombre": "Faundez Salazar Luis",
                 "rut": "17810031-9",
@@ -1858,7 +1878,7 @@
                 "ip": ""
             },
             {
-                "grado": "P.N.S CIVIL",
+                "grado": "P.N.S. CIVIL",
                 "codigo": "949590-D",
                 "nombre": "Aguilar Valdes Alejandra",
                 "rut": "12270045-3",
@@ -1868,7 +1888,7 @@
                 "ip": ""
             },
             {
-                "grado": "P.N.S CIVIL",
+                "grado": "P.N.S. CIVIL",
                 "codigo": "983143-K",
                 "nombre": "Trincado Ortiz Carolina",
                 "rut": "10936440-1",
@@ -1967,16 +1987,7 @@
     {
         "dependencia": "SECCIÓN MANTENIMIENTO",
         "personal": [
-            {
-                "grado": "CAPITAN",
-                "codigo": "989641-C",
-                "nombre": "Parra Sierra Nicolas",
-                "rut": "16321963-8",
-                "fecha_nacimiento": "09-04-1986",
-                "departamento": "DEPTO. OPERACIONES T.I.C.",
-                "dependencia": "SECCIÓN MANTENIMIENTO",
-                "ip": ""
-            },
+
             {
                 "grado": "CAPITAN",
                 "codigo": "984227-Q",
@@ -2393,7 +2404,7 @@
                 "ip": ""
             },
             {
-                "grado": "SARGENTO 1°",
+                "grado": "SUBOFICIAL",
                 "codigo": "961641-F",
                 "nombre": "Riffo Leal Rene",
                 "rut": "14217068-K",
@@ -2809,7 +2820,7 @@
                 "ip": "22343"
             },
             {
-                "grado": "PROGRAMADOR (GDO. 09)",
+                "grado": "P.N.S. CIVIL",
                 "codigo": "965159-G",
                 "nombre": "Hormazabal Valladares Claudio",
                 "rut": "13772378-6",
