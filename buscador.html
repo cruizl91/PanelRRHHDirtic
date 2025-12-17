@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscador de Personal DIRTIC</title>
+    <link rel="icon" type="image/png" href="images/DIRTIC.png">
+    
+    <!-- Estilos base del sitio -->
+    <link rel="stylesheet" href="headerFooter.css">
+    <link rel="stylesheet" href="menu.css">
+    <link rel="stylesheet" href="buscador.css">
+    <!-- Iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Los placeholders para que include.js cargue el header -->
+    <div id="header-placeholder"></div>
+
+    <main class="main-content">
+        <div class="search-container">
+            <h2 class="search-title">
+                <i class="fas fa-id-card"></i> Buscador de Personal DIRTIC
+            </h2>
+
+            <!-- Filtros de Búsqueda -->
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <label for="searchName">Nombre del Funcionario</label>
+                    <input type="text" id="searchName" placeholder="Ej: Juan Pérez..." autocomplete="off">
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterDept">Departamento</label>
+                    <select id="filterDept">
+                        <option value="">Selecciona una opción</option>
+                    </select>
+                </div>
+
+                <div class="filter-group">
+                    <label for="filterDepen">Dependencia</label>
+                    <select id="filterDepen">
+                        <option value="">Selecciona una opción</option>
+                    </select>
+                </div>
+            </div>
+
+
+           <div class="results-info" id="resultsCount">Ingresa criterios para buscar...</div>
+
+            <!-- Grilla de Resultados -->
+            <div id="resultsGrid" class="results-grid">
+                <!-- Tarjetas inyectadas por JS -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Placeholder para el footer -->
+    <div id="footer-placeholder"></div>
+
+    <!-- Script para incluir header/footer -->
+    <script src="include.js"></script>
+
+     <script>
+        // Lógica del buscador
+        let personalTotal = [];
+
+        const inputNombre = document.getElementById('searchName');
+        const selectDpto = document.getElementById('filterDept');
+        const selectDepen = document.getElementById('filterDepen');
+        const grid = document.getElementById('resultsGrid');
+        const contador = document.getElementById('resultsCount');
+
+        async function cargarDatos() {
+            try {
+                const respuesta = await fetch('funcionarios.json');
+                const datos = await respuesta.json();
+                
+                const dptos = new Set();
+
+                personalTotal = [];
+                datos.forEach(seccion => {
+                    if (seccion.personal) {
+                        seccion.personal.forEach(p => {
+                            personalTotal.push(p);
+                            if (p.departamento) dptos.add(p.departamento);
+                        });
+                    }
+                });
+
+                // Llenar selector de Departamentos inicialmente
+                poblarSelect(selectDpto, Array.from(dptos).sort());
+
+                grid.innerHTML = '';
+                contador.textContent = 'Ingresa criterios para buscar...';
+
+            } catch (e) {
+                console.error("Error cargando funcionarios:", e);
+                grid.innerHTML = '<div class="no-results">Error al cargar la base de datos.</div>';
+            }
+        }
+
+        /**
+         * Poblar un elemento select con una lista de ítems
+         */
+        function poblarSelect(dropdown, lista) {
+            // Limpiar opciones anteriores manteniendo la primera (Selecciona una opción)
+            dropdown.innerHTML = '<option value="">Selecciona una opción</option>';
+            lista.forEach(item => {
+                const opt = document.createElement('option');
+                opt.value = item;
+                opt.textContent = item;
+                dropdown.appendChild(opt);
+            });
+        }
+
+        /**
+         * Actualiza el selector de dependencias basado en el departamento elegido
+         */
+        function actualizarDependenciasPorDepartamento() {
+            const dptoSeleccionado = selectDpto.value;
+            
+            if (dptoSeleccionado === "") {
+                selectDepen.innerHTML = '<option value="">Selecciona una opción</option>';
+                return;
+            }
+
+            // Filtrar dependencias únicas que pertenecen al departamento seleccionado
+            const depensFiltradas = new Set();
+            personalTotal.forEach(p => {
+                if (p.departamento === dptoSeleccionado && p.dependencia) {
+                    depensFiltradas.add(p.dependencia);
+                }
+            });
+
+            poblarSelect(selectDepen, Array.from(depensFiltradas).sort());
+        }
+
+        function dibujarTarjetas(lista) {
+            grid.innerHTML = '';
+            contador.textContent = `${lista.length} funcionario(s) encontrado(s).`;
+
+            if (lista.length === 0) {
+                grid.innerHTML = '<div class="no-results">No se encontraron coincidencias.</div>';
+                return;
+            }
+
+            lista.forEach(f => {
+                const card = document.createElement('div');
+                card.className = 'funcionario-card';
+                card.innerHTML = `
+                    <h3>${f.nombre}</h3>
+                    <div class="info-row">
+                        <span class="info-label">RUT</span>
+                        <span class="info-value">${f.rut || 'N/A'}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Grado</span>
+                        <span class="info-value">${f.grado || 'N/A'}</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">IP/Anexo</span>
+                        <span class="info-value"><span class="badge-ip">${f.ip || '---'}</span></span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Departamento</span>
+                        <span class="info-value">${f.departamento || 'N/A'}</span>
+                    </div>
+                    <div class="info-row info-row-last">
+                        <span class="info-label">Dependencia</span>
+                        <span class="info-value">${f.dependencia || 'N/A'}</span>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        function filtrar() {
+            const nom = inputNombre.value.toLowerCase().trim();
+            const dpto = selectDpto.value;
+            const dep = selectDepen.value;
+
+            // CASO 1: Si no hay nada escrito ni seleccionado
+            if (nom === "" && dpto === "" && dep === "") {
+                grid.innerHTML = '';
+                contador.textContent = 'Ingresa criterios para buscar...';
+                return;
+            }
+
+            // CASO 2: Si hay un departamento seleccionado pero NO se ha seleccionado dependencia ni escrito nombre
+            // (Esta es la nueva restricción solicitada)
+            if (nom === "" && dpto !== "" && dep === "") {
+                grid.innerHTML = '';
+                contador.textContent = 'Selecciona una dependencia para ver el personal...';
+                return;
+            }
+
+            // Filtrado normal
+            const filtrados = personalTotal.filter(p => {
+                const coincideNombre = nom === "" || p.nombre.toLowerCase().includes(nom);
+                const coincideDpto = dpto === "" || p.departamento === dpto;
+                const coincideDepen = dep === "" || p.dependencia === dep;
+                
+                return coincideNombre && coincideDpto && coincideDepen;
+            });
+
+            dibujarTarjetas(filtrados);
+        }
+
+        // Listener para cambio de departamento: actualiza dependencias y filtra
+        selectDpto.addEventListener('change', () => {
+            actualizarDependenciasPorDepartamento();
+            filtrar();
+        });
+
+        inputNombre.addEventListener('input', filtrar);
+        selectDepen.addEventListener('change', filtrar);
+
+        document.addEventListener('DOMContentLoaded', cargarDatos);
+    </script>
+
+    <script src="./fecha-hora.js"></script>
+    <script src="menu-toggle.js"></script>
+</body>
+</html>
