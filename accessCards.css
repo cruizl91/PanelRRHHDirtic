@@ -287,6 +287,55 @@ content: '🎁 🎂 🥳';
     padding: 10px;
 }
 
+/* ESTILOS ESPECÍFICOS PARA PERSONAL DE SERVICIO (3 COLUMNAS) */
+
+#servicios-listado li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px; /* Espacio entre columnas */
+}
+
+/* Columna Nombre: Ocupa el espacio sobrante */
+.service-main {
+    flex: 2;
+    text-align: left;
+}
+
+/* Columna Teléfono: Ancho fijo para alineación */
+.service-tel {
+    flex: 1;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Columna IP: Ancho fijo alineado a la derecha */
+.service-ip {
+    flex: 0 0 100px;
+    text-align: right;
+}
+
+/* --- AJUSTES PARA MÓVILES --- */
+@media (max-width: 600px) {
+    #servicios-listado ul li {
+        flex-wrap: wrap; /* Permite que si no cabe, baje a la siguiente línea */
+        padding: 12px 15px;
+    }
+
+    .service-main {
+        flex: 1 1 100%; /* El nombre ocupa toda la fila arriba */
+        margin-bottom: 5px;
+    }
+
+    .service-tel, .service-ip {
+        flex: 1; /* El teléfono e IP comparten la fila de abajo */
+        font-size: 0.85em;
+    }
+    
+    .service-tel {
+        text-align: left;
+    }
+}
 
 /* ----------------------------------------------------------------- */
 /* --- MEDIA QUERY PARA MÓVILES (Ancho Máximo 600px) --- */
