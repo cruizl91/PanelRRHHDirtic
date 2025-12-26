@@ -1131,6 +1131,16 @@
                 "departamento": "DEPTO. ABASTECIMIENTO T.I.C.",
                 "dependencia": "OFICINA FACTURACIÓN",
                 "ip": "25709"
+            },
+            {
+                "grado": "C.P.R. (GDO. 12)",
+                "codigo": "036405-Q",
+                "nombre": "González Ulloa Carolina",
+                "rut": "16988134-0",
+                "fecha_nacimiento": "04-11-1988",
+                "departamento": "DEPTO. ABASTECIMIENTO T.I.C.",
+                "dependencia": "OFICINA FACTURACIÓN",
+                "ip": "25709"
             }
         ]
     },
