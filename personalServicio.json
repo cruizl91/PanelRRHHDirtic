@@ -1,11 +1,11 @@
 [
-  {"fecha": "Desde el 19 al 26 de diciembre de 2025"},
-  {"dotacion": "Oficial Ayudantia", "nombre": "Capitán José Castro Vargas", "telefono": "976685308", "ip": "25767"},
-  {"dotacion": "Oficial Operativo", "nombre": "Capitán Nicolás Parra Sierra", "telefono": "952174852", "ip": "22381"},
-  {"dotacion": "Suboficial Fiscalizador", "nombre": "Suboficial Mayor Víctor Soto Duijvesteijn", "telefono": "978889555", "ip": "25734"},
-  {"dotacion": "Suboficial Operativo", "nombre": "Suboficial Mayor Jessica Meza Vivar", "telefono": "988298835", "ip": "25714"},
-  {"dotacion": "O.P.U. DIRTIC", "nombre": " Sgto. 2° (A/O) Leonardo Bazán Rojas", "telefono": "963738604", "ip": "22276"},
-  {"dotacion": "O.P.U. Depto. Operaciones T.I.C.", "nombre": "Sgto. 2° Gabriela Albino Lara", "telefono": "964213843", "ip": "22324"},
-  {"dotacion": "O.P.U. Depto. Proyectos T.I.C.", "nombre": "Sgto 2° Israel Barraza Rojas", "telefono": "930550805", "ip": "26815"},
-  {"dotacion": "O.P.U. Depto. Abastecimiento T.I.C.", "nombre": "Sgto. 2° Verónica Valencia Pinto", "telefono": "996985668", "ip": "25711"}
+  {"fecha": "Desde el 26 de diciembre de 2025 al 2 de enero de 2026"},
+  {"dotacion": "Oficial Ayudantia", "nombre": "Capitán Víctor Flores Mella", "telefono": "940758488", "ip": "26806"},
+  {"dotacion": "Oficial Operativo", "nombre": "Teniente Rodrigo Bravo Ramírez", "telefono": "959148775", "ip": "25266"},
+  {"dotacion": "Suboficial Fiscalizador", "nombre": "Suboficial Gabriel Muñoz Rabanal", "telefono": "976678241", "ip": "26766"},
+  {"dotacion": "Suboficial Operativo", "nombre": "Suboficial Mayor Cesar Ibáñez Navarro", "telefono": "978458666", "ip": "25712"},
+  {"dotacion": "O.P.U. DIRTIC", "nombre": "Suboficial Cristian Cáceres Castillo", "telefono": "961125457", "ip": "22275"},
+  {"dotacion": "O.P.U. Depto. Operaciones T.I.C.", "nombre": "Cabo 1° Dayana Poblete Cea", "telefono": "936200156", "ip": "22389"},
+  {"dotacion": "O.P.U. Depto. Proyectos T.I.C.", "nombre": "Cabo 1° Pablo Vargas Aguilar", "telefono": "994178717", "ip": "22366"},
+  {"dotacion": "O.P.U. Depto. Abastecimiento T.I.C.", "nombre": "Cabo 1° Fiorella Meléndez Jeldres", "telefono": "930865937", "ip": "25734"}
 ]
