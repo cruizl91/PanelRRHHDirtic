@@ -119,42 +119,6 @@ main {
     color: var(--blanco); /* Añadido para asegurar que el texto sea blanco */
 }
 
-/* NAV (Asumo que es parte del header) */
-.nav-links {
-    display: flex;
-    gap: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: var(--blanco);
-    font-size: 1rem;
-    font-weight: bold;
-    padding: 8px 14px;
-    border-radius: 6px;
-    transition: background 0.25s, transform 0.25s;
-}
-
-/* HOVER */
-.nav-links a:hover {
-    background: rgba(255,255,255,0.25);
-    transform: translateY(-2px);
-}
-
-/* RESPONSIVE (Asumo que es parte del header) */
-@media (max-width: 700px) {
-    .main-header {
-        flex-direction: column;
-        gap: 10px;
-    }
-    .nav-links {
-        gap: 15px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-}
-
-
 /* ESTILO ESPECÍFICO PARA LA FECHA Y HORA (MANTENIDO) */
 #fecha-hora {
     font-size: 1em;
@@ -183,7 +147,6 @@ footer {
 
 /* Estilo general de los íconos */
 .social-links a {
-    color: var(--blanco);
     font-size: 1.4rem;
     width: 45px;
     height: 45px;
@@ -198,7 +161,6 @@ footer {
 
 /* Efecto hover */
 .social-links a:hover {
-    background: var(--blanco);
     color: var(--verde);
     transform: scale(1.15);
 }
