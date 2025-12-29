@@ -251,6 +251,16 @@
         "departamento"    : "DEPTO. PROYECTOS T.I.C.",
         "dependencia"     : "DEPARTAMENTO PROYECTOS T.I.C.",
         "ip"              : ""
+      },
+      {
+        "grado"           : "C.P.R. (Gdo. 12)",
+        "codigo"          : "044798-H",
+        "nombre"          : "Ulloa Sepulveda Julio",
+        "rut"             : "11948762-5",
+        "fecha_nacimiento": "16-10-1972",
+        "departamento"    : "DEPTO. PROYECTOS T.I.C.",
+        "dependencia"     : "DEPARTAMENTO PROYECTOS T.I.C.",
+        "ip"              : ""
       }
     ]
   },
@@ -1003,11 +1013,11 @@
         "ip"              : ""
       },
       {
-        "grado"           : "C.P.R. (Gdo. 11)",
-        "codigo"          : "970804-H",
-        "nombre"          : "Godoy Miranda Rommy",
-        "rut"             : "10142831-1",
-        "fecha_nacimiento": "30-11-1964",
+        "grado"           : "C.P.R. (Gdo. 13)",
+        "codigo"          : "003494-R",
+        "nombre"          : "Vera Vega Heidy",
+        "rut"             : "12149936-3",
+        "fecha_nacimiento": "16-02-1973",
         "departamento"    : "DEPTO. PROYECTOS T.I.C.",
         "dependencia"     : "OFICINA DE PARTES PROYECTOS",
         "ip"              : ""
@@ -1263,16 +1273,6 @@
         "nombre"          : "Canales Montenegro Maria",
         "rut"             : "07061311-5",
         "fecha_nacimiento": "04-06-1958",
-        "departamento"    : "DEPTO. PROYECTOS T.I.C.",
-        "dependencia"     : "OFICINA GESTIÓN DE PROYECTOS",
-        "ip"              : ""
-      },
-      {
-        "grado"           : "C.P.R. (Gdo. 13)",
-        "codigo"          : "003494-R",
-        "nombre"          : "Vera Vega Heidy",
-        "rut"             : "12149936-3",
-        "fecha_nacimiento": "16-02-1973",
         "departamento"    : "DEPTO. PROYECTOS T.I.C.",
         "dependencia"     : "OFICINA GESTIÓN DE PROYECTOS",
         "ip"              : ""
