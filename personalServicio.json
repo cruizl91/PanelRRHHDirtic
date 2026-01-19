@@ -1,12 +1,14 @@
 [
-  {"fecha": "Desde el 02 de enero de 2026 al 9 de enero de 2026"},
-  {"dotacion": "Oficial Ayudantia", "nombre": "Capitán Faúndez Salazar Luis", "telefono": "957485159", "ip": "26761"},
-  {"dotacion": "Oficial Operativo", "nombre": "Capitán Yáñez Estay Elizabeth", "telefono": "940759271", "ip": "22361"},
-  {"dotacion": "Suboficial Fiscalizador", "nombre": "Suboficial Mayor Alfaro Pavez Sergio", "telefono": "995018687", "ip": "26766"},
-  {"dotacion": "Suboficial Operativo", "nombre": "Suboficial Montoya Guzmán Felípe", "telefono": "988298835", "ip": "22353"},
-  {"dotacion": "O.P.U. DIRTIC", "nombre": "Cabo 1° Carlos Ruiz Leiva", "telefono": "965007127", "ip": "22276"},
-  {"dotacion": "O.P.U. Depto. Operaciones T.I.C.", "nombre": "Sgto 2° Jarpa Muñoz Luis", "telefono": "977805831", "ip": "22332"},
-  {"dotacion": "O.P.U. Depto. Proyectos T.I.C.", "nombre": "Sgto. 1° Rojas Gatica Ronald", "telefono": "957938627", "ip": "25745"},
-  {"dotacion": "O.P.U. Depto. Abastecimiento T.I.C.", "nombre": "Sgto. 2° (A. Cont.)", "telefono": "930524277", "ip": "25734"}
+  {"fecha": "Desde el 16 de enero de 2026 al 23 de enero de 2026"},
+  {"dotacion": "Oficial Ayudantia", "nombre": "Capitán (I) Pablo Ortega Segura", "telefono": "944742478", "ip": "25708"},
+  {"dotacion": "Oficial Operativo", "nombre": "Capitán Gonzalo Méndez Jara", "telefono": "940751642", "ip": "22318"},
+  {"dotacion": "Suboficial Fiscalizador", "nombre": "Suboficial Mayor Oscar Aravena Fuenzalida", "telefono": "982287279", "ip": "22286"},
+  {"dotacion": "Suboficial Operativo", "nombre": "Suboficial Mayor Jessica Meza Vivar", "telefono": "988298835", "ip": "25714"},
+  {"dotacion": "O.P.U. DIRTIC", "nombre": "Sargento 2° Juan Fuentes Castro", "telefono": "930652040", "ip": "22277"},
+  {"dotacion": "Gabinete Técnico", "nombre": "Sargento 1° Werner Cárdenas Campos", "telefono": "920744477", "ip": "26799"},
+  {"dotacion": "O.P.U. Depto. Operaciones T.I.C.", "nombre": "Sgto 2° Daniel Meléndez Meléndez", "telefono": "977010418", "ip": "22389"},
+  {"dotacion": "O.P.U. Depto. Proyectos T.I.C.", "nombre": "Cabo 2° Guillermo Henríquez Aillapán", "telefono": "948562918", "ip": "25255"},
+  {"dotacion": "O.P.U. Depto. Abastecimiento T.I.C.", "nombre": "Cabo 2° Ignacio Vásquez Verdugo", "telefono": "976051293", "ip": "25725"}
 
 ]
+
