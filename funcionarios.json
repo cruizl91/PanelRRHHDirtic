@@ -95,12 +95,13 @@
       {
         "grado"           : "Sargento 2°",
         "codigo"          : "977505-Y",
-        "nombre"          : "Diaz Manriquez Walter",
+        "nombre"          : "DIAZ MANRIQUEZ WALTER JESUS",
         "rut"             : "17069887-8",
         "fecha_nacimiento": "26-08-1988",
         "departamento"    : "DEPTO. OPERACIONES T.I.C.",
         "dependencia"     : "CENTRO DE OPERACIONES DE LA RED (NOC)",
-        "ip"              : ""
+        "ip"              : "26743",
+        "fono"            : "999241613" 
       },
       {
         "grado"           : "Cabo 1°",
