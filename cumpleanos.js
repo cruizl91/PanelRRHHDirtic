@@ -127,7 +127,7 @@ function buscarCumpleanios(data) {
                     dias: diferenciaDias,
                     mensaje: mensaje,
                     dependencia: dependenciaObj.dependencia, 
-                    grado: funcionario.grado,
+                    grado: formatearGrado(funcionario.grado),
                     edad: edadFutura // La edad ya está aquí
                 });
             }
@@ -218,4 +218,5 @@ function cargarDatosCumpleanios() {
 }
 
 // Iniciar la carga de datos al cargar la página
+
 document.addEventListener('DOMContentLoaded', cargarDatosCumpleanios);
