@@ -1,15 +1,16 @@
 [
-  {"fecha": "Desde el 23 de enero de 2026 al 30 de enero de 2026"},
-  {"dotacion": "Oficial Ayudantia", "nombre": "Capitán José Castro Vargas", "telefono": "976685308", "ip": "25767"},
-  {"dotacion": "Oficial Operativo", "nombre": "Capitán Carlos Correa Catalán", "telefono": "982939909", "ip": "22333"},
-  {"dotacion": "Suboficial Fiscalizador", "nombre": "Suboficial Mayor Víctor Soto Duijvesteijn", "telefono": "978889555", "ip": "25728"},
-  {"dotacion": "Suboficial Operativo", "nombre": "Suboficial Andrés Lema González", "telefono": "988298835", "ip": "25726"},
-  {"dotacion": "O.P.U. DIRTIC", "nombre": "Sargento 2° (A/O) Leonardo Bazán Rojas", "telefono": "963738604", "ip": "22276"},
-  {"dotacion": "Gabinete Técnico", "nombre": "Cabo 1° Rigoberto Castillo Fierro", "telefono": "983555364", "ip": "25980"},
-  {"dotacion": "O.P.U. Depto. Operaciones T.I.C.", "nombre": "Cabo 1° Dayana Poblete Cea", "telefono": "936200156", "ip": "22389"},
-  {"dotacion": "O.P.U. Depto. Proyectos T.I.C.", "nombre": "Cabo 1° Katherine Sobarzo Reyes", "telefono": "983348009", "ip": "26814"},
-  {"dotacion": "O.P.U. Depto. Abastecimiento T.I.C.", "nombre": "Sgto. 2° (A/C) Pedro Torres Cáceres", "telefono": "930524277", "ip": "25732"}
+  {"fecha": "Desde el 27 de febrero al 06 de marzo de 2026"},
+  {"dotacion": "Oficial Ayudantia", "nombre": "Teniente Diego Benavides González", "telefono": "944291991", "ip": "25266"},
+  {"dotacion": "Oficial Operativo", "nombre": "Capitán Carlos Correa Catalán", "telefono": "982939909", "ip": "22322"},
+  {"dotacion": "Suboficial Fiscalizador", "nombre": "Suboficial Gabriel Muñoz Rabanal", "telefono": "976678241", "ip": "26766"},
+  {"dotacion": "Suboficial Operativo", "nombre": "Suboficial Mayor Cesar Ibañez Navarro", "telefono": "988298835", "ip": "25712"},
+  {"dotacion": "O.P.U. DIRTIC", "nombre": "Cabo 1° Carlos Ruiz Leiva", "telefono": "965007127", "ip": "22275"},
+  {"dotacion": "Gabinete Técnico", "nombre": "Sargento 2° Gerardo Pacheco Sandoval", "telefono": "983386788", "ip": "26801"},
+  {"dotacion": "O.P.U. Depto. Operaciones T.I.C.", "nombre": "Sargento 2° Luis Jarpa Muñoz", "telefono": "977805831", "ip": "22332"},
+  {"dotacion": "O.P.U. Depto. Proyectos T.I.C.", "nombre": "Cabo 1° Gustavo Canales Salgado", "telefono": "982757495", "ip": "26745"},
+  {"dotacion": "O.P.U. Depto. Abastecimiento T.I.C.", "nombre": "Cabo 1° Edson Muñoz Medel", "telefono": "957347353", "ip": "25703"}
 
 ]
+
 
 
