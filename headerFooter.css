@@ -10,7 +10,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -19,116 +19,115 @@ body {
   flex-direction: column;
   background: var(--gris);
   color: var(--texto);
+  /* Añadimos padding-top para que el contenido no quede oculto bajo el header fijo */
+  padding-top: 90px; 
 }
 
-/* FLEX para centrar el cuerpo entre header y footer */
 main {
-  flex: 1; /* ocupa todo el espacio disponible */
+  flex: 1;
   display: block;
-  justify-content: center; /* centrado horizontal */
-  align-items: baseline;     /* centrado vertical */
-  padding: 10px 0;         /* <-- Margen superior e inferior para separar de Header/Footer */
-  width: 100%;             /* Asegura que ocupe todo el ancho */
+  padding: 10px 0;
+  width: 100%;
 }
 
 /* ======================================= */
-/* ESTILOS DE FOOTER Y REDES SOCIALES */
-/* (MANTENIDOS) */
+/* HEADER PRINCIPAL */
 /* ======================================= */
 
-/* Estilo general de los enlaces de red social */
-.social-links a {
-    /* Define el área del clic para íconos y padding */
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    width: 50px;  /* Ancho del contenedor */
-    height: 50px; /* Alto del contenedor */
-    border-radius: 50%;
-    color: var(--blanco);
-    background-color: transparent;
-    transition: background-color 0.3s, transform 0.3s;
-    font-size: 1.2rem; /* Tamaño para los íconos (<i>) que quedan */
-}
-
-/* Efecto Hover para todos los enlaces (íconos o imágenes) */
-.social-links a:hover {
-    background-color: rgba(255, 255, 255, 0.2); /* Fondo semi-transparente al pasar el mouse */
-    transform: scale(1.1); /* Ligeramente más grande al pasar el mouse */
-}
-
-/* ------------------------------------------- */
-/* NUEVOS ESTILOS PARA LAS IMÁGENES PERSONALIZADAS */
-/* ------------------------------------------- */
-
-.social-links a .social-icon-img {
-    /* Asegura que la imagen quepa dentro del área de 40x40px definida arriba */
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Asegura que la imagen se vea completa y mantenga sus proporciones */
-    border-radius: 50%; /* Opcional: para que las imágenes personalizadas también sean redondas */
-    display: block; /* Elimina posibles espacios extra debajo de la imagen */
-}
-
-/* Si quieres que las imágenes tengan un color de fondo fijo (y no solo en hover): */
-.social-links a:has(.social-icon-img) {
-    /* Puedes definir un color de fondo si lo deseas, o dejarlo transparente */
-    background-color: transparent; 
-}
-
-
-/* --- SECCIÓN DE HEADER PRINCIPAL (MANTENIDA) --- */
 .main-header {
-    /* --- PROPIEDADES AÑADIDAS PARA HACERLO FIJO --- */
-    position: fixed;        /* Fija el elemento a la ventana del navegador */
-    top: 0;                 /* Ancla a la parte superior */
-    left: 0;                /* Ancla a la izquierda */
-    right: 0;               /* Ancla a la derecha, asegurando que ocupe todo el ancho */
-    z-index: 990;           /* Asegura que esté por encima de casi todos los demás elementos */
-    /* --------------------------------------------------- */
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 990;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background: var(--verde);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Permite que los elementos bajen de línea en móvil */
+    flex-wrap: wrap; 
 }
 
-/* CONTENEDOR DEL LOGO + TEXTO */
+/* Agrupación de botón y marca */
+.header-left-group {
+    display: flex;
+    align-items: center;
+}
+
 .brand-container {
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-/* IMAGEN DEL LOGO */
 .brand-logo {
-    width: 60px;     /* cuadrado: puedes cambiar el tamaño */
-    height: 60px;    /* cuadrado */
+    width: 60px;
+    height: 60px;
     object-fit: cover;
     border-radius: 6px;
-    /*background: #fff;  por si la imagen no carga */
 }
 
-/* TEXTO Recursos Humanos TIC */
 .brand {
     font-size: 1.6rem;
     font-weight: bold;
     letter-spacing: 1px;
-    color: var(--blanco); /* Añadido para asegurar que el texto sea blanco */
+    color: var(--blanco);
 }
 
-/* ESTILO ESPECÍFICO PARA LA FECHA Y HORA (MANTENIDO) */
 #fecha-hora {
     font-size: 1em;
     font-weight: bold;
-    /* Esto asegura la separación del logo/brand */
     text-align: center;
-    color: var(--blanco); /* Asegura que el texto sea blanco, heredado del .main-header */
+    color: var(--blanco);
 }
 
-/* --- FOOTER (MANTENIDO) --- */
+/* ======================================= */
+/* RESPONSIVO MÓVIL (Cambios solicitados) */
+/* ======================================= */
+
+@media (max-width: 768px) {
+    body {
+        /* Aumentamos el padding superior porque el header crecerá en altura */
+        padding-top: 130px; 
+    }
+
+    .main-header {
+        padding: 10px 15px;
+        /* Forzamos que los elementos internos se organicen */
+        justify-content: space-between; 
+    }
+
+    /* 1. Botón hamburguesa a la izquierda (ya está dentro de header-left-group) */
+    .header-left-group {
+        order: 1;
+    }
+
+    /* 2. Fecha y Hora centrada en la parte inferior del header */
+    #fecha-hora {
+        order: 3; /* Lo manda al final del flujo flex */
+        width: 100%; /* Ocupa todo el ancho para bajar de línea */
+        margin-top: 10px;
+        padding-top: 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2); /* Separador sutil */
+        font-size: 0.9rem;
+    }
+
+    .brand {
+        font-size: 1.2rem;
+    }
+
+    .brand-logo {
+        width: 45px;
+        height: 45px;
+    }
+}
+
+/* ======================================= */
+/* FOOTER (MANTENIDO) */
+/* ======================================= */
+
 footer {
     background: var(--verde);
     color: var(--blanco);
@@ -137,7 +136,6 @@ footer {
     font-size: 1rem;
 }
 
-/* Contenedor de iconos */
 .social-links {
     display: flex;
     justify-content: center;
@@ -145,7 +143,6 @@ footer {
     margin-bottom: 10px;
 }
 
-/* Estilo general de los íconos */
 .social-links a {
     font-size: 1.4rem;
     width: 45px;
@@ -157,15 +154,22 @@ footer {
     align-items: center;
     transition: all 0.25s ease-in-out;
     text-decoration: none;
+    color: var(--blanco);
 }
 
-/* Efecto hover */
 .social-links a:hover {
-    color: var(--verde);
+    background-color: rgba(255, 255, 255, 0.2);
     transform: scale(1.15);
 }
 
-/* Texto del footer */
+.social-links a .social-icon-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    display: block;
+}
+
 footer p {
     margin-top: 10px;
     font-size: 0.9rem;
