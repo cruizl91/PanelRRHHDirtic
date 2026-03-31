@@ -57,7 +57,7 @@
         "nombre": "AHUMADA VALDES LUIS",
         "rut": "12589256-6",
         "fecha_nacimiento": "25-06-1974",
-        "departamento": "DIRECCION T.I.C.",
+        "departamento": "DEPTO. PROYECTOS T.I.C.",
         "dependencia": "AYUDANTÍA",
         "ip": "25765",
         "fono": ""
@@ -292,10 +292,10 @@
     "personal": [
       {
         "grado": "GENERAL",
-        "codigo": "942608-L",
-        "nombre": "VILLARROEL VALENCIA ENRIQUE",
-        "rut": "12638616-8",
-        "fecha_nacimiento": "10-01-1974",
+        "codigo": "949775-R",
+        "nombre": "GUTIÉRREZ SEPÚLVEDA MARCO",
+        "rut": "13215105-9",
+        "fecha_nacimiento": "31-08-1977",
         "departamento": "DIRECCION T.I.C.",
         "dependencia": "DIRECCIÓN DE T.I.C.",
         "ip": "22271",
@@ -323,7 +323,7 @@
     "dependencia": "GABINETE TÉCNICO",
     "personal": [
       {
-        "grado": "SARGENTO 2°",
+        "grado": "SARGENTO 1°",
         "codigo": "974943-T",
         "nombre": "CARDENAS CAMPOS WERNER",
         "rut": "16239267-0",
