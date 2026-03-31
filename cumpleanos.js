@@ -1,7 +1,7 @@
 /**
  * CONFIGURACIÓN DE LA BASE DE DATOS COMPARTIDA
  */
-const URL_SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTptIIW77JHIFq3xEONR-BqZG0KKE-SkgtDbpsGpPN8QS68MWIpoG6whqdbDxIXHSwKlJrBWomfCZqo/pub?output=csv'; // URL de publicación CSV
+const URL_SHEET_CSV = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTptIIW77JHIFq3xEONR-BqZG0KKE-SkgtDbpsGpPN8QS68MWIpoG6whqdbDxIXHSwKlJrBWomfCZqo/pub?output=csv'; 
 const DIAS_ANTICIPACION = 7;
 const meses = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
@@ -13,17 +13,15 @@ async function cargarDatosCumpleanios() {
         const response = await fetch(URL_SHEET_CSV);
         const csvText = await response.text();
         
-        // Separar por líneas y limpiar espacios
         const lineas = csvText.split(/\r?\n/);
         if (lineas.length < 2) return;
 
-        // Detectar índices de columnas dinámicamente
+        // Detectar índices de columnas dinámicamente (Sin dependencia)
         const cabecera = lineas[0].split(',').map(h => h.trim().toLowerCase());
         const idx = {
             nombre: cabecera.indexOf('nombre'),
             grado: cabecera.indexOf('grado'),
-            fecha: cabecera.indexOf('fecha_nacimiento'),
-            dep: cabecera.indexOf('dependencia')
+            fecha: cabecera.indexOf('fecha_nacimiento')
         };
 
         // Procesar solo si las columnas esenciales existen
@@ -32,8 +30,7 @@ async function cargarDatosCumpleanios() {
             return {
                 nombre: columnas[idx.nombre],
                 grado: columnas[idx.grado],
-                fecha_nacimiento: columnas[idx.fecha],
-                dependencia: columnas[idx.dep]
+                fecha_nacimiento: columnas[idx.fecha]
             };
         }).filter(p => p.nombre && p.fecha_nacimiento);
 
@@ -44,7 +41,7 @@ async function cargarDatosCumpleanios() {
 }
 
 /**
- * LÓGICA DE NEGOCIO (Igual a la anterior pero optimizada)
+ * LÓGICA DE NEGOCIO
  */
 function procesarCumpleanios(data) {
     const hoy = new Date();
@@ -83,7 +80,7 @@ function procesarCumpleanios(data) {
 // --- Helpers Auxiliares ---
 function parsearFecha(str) {
     if (!str) return null;
-    const d = str.split(/[-/]/); // Soporta 15-03-1990 o 15/03/1990
+    const d = str.split(/[-/]/); 
     return d.length === 3 ? new Date(d[2], d[1]-1, d[0]) : null;
 }
 
@@ -102,6 +99,8 @@ function dibujarInterfaz(lista) {
     const hoyCont = document.getElementById('cumpleanios-hoy-container');
     const proxCont = document.getElementById('cumpleanios-listado');
     
+    if (!hoyCont || !proxCont) return;
+
     const hoy = lista.filter(i => i.dias === 0);
     const prox = lista.filter(i => i.dias > 0);
 
