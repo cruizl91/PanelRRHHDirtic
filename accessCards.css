@@ -2,126 +2,106 @@
 /* --- ESTILOS PARA EL BLOQUE DE CUMPLEAÑOS DE HOY --- */
 /* ================================================= */
 
-/* La tarjeta principal que contiene el mensaje festivo */
-.cumpleanios-hoy-card {
-    background: linear-gradient(145deg, #FFD700 0%, #FF8C00 100%); /* Dorado/Naranja vibrante */
-    color: #333; /* Texto oscuro para contraste */
+/* La tarjeta principal (Actualizado para coincidir con .card-hoy del JS) */
+.card-hoy, .cumpleanios-hoy-card {
+    background: linear-gradient(145deg, #FFD700 0%, #FF8C00 100%);
+    color: #333;
     padding: 20px 30px;
     border-radius: 10px;
-    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.5); /* Sombra festiva */
+    box-shadow: 0 6px 15px rgba(255, 165, 0, 0.5);
     text-align: center;
-    width: 90%; /* Asegura que no ocupe todo el ancho del contenedor */
+    width: 90%;
     max-width: 800px;
-    margin: 0 auto; /* Centrar la tarjeta */
-    border: 4px solid #FFFFFF; /* Borde blanco grueso */
+    margin: 20px auto; /* Añadido margen para separar de otros elementos */
+    border: 4px solid #FFFFFF;
     position: relative;
-    overflow: hidden; /* Oculta el confeti que se salga */
+    overflow: hidden;
     animation: pulseGlow 2s infinite alternate;
 }
 
-/* Animación sutil de confeti (estático) */
-.cumpleanios-hoy-card::before, .cumpleanios-hoy-card::after {
-    content: '🎉 🥳 🎈 🎁 🌟 🎂';
-    position: absolute;
-    font-size: 1.5rem;
-    line-height: 1;
-    opacity: 0.8;
-    color: #FF1493; /* Rosa fuerte */
+@keyframes pulseGlow {
+    from { transform: scale(1); box-shadow: 0 6px 15px rgba(255, 165, 0, 0.5); }
+    to { transform: scale(1.02); box-shadow: 0 10px 25px rgba(255, 165, 0, 0.7); }
 }
 
-.cumpleanios-hoy-card::before {
-    content: '🎉 🥳 🎈'; 
+/* Decoración festiva */
+.card-hoy::before, .card-hoy::after {
     position: absolute;
-    top: 5px; 
-    left: 10px;
-    font-size: 2rem; 
-    line-height: 1;
+    font-size: 1.8rem;
     opacity: 0.8;
-    color: #FF1493; /* Rosa fuerte */
-    transform: rotate(-10deg);
-    z-index: 10;
-    pointer-events: none; /* Asegura que no interfiera con clics */
-}
-
-.cumpleanios-hoy-card::after {
-content: '🎁 🎂 🥳'; 
-    position: absolute;
-    bottom: 5px; 
-    right: 10px;
-    font-size: 1.8rem; 
-    line-height: 1;
-    opacity: 0.8;
-    color: #4B0082; /* Púrpura para contraste */
-    transform: rotate(10deg);
-    z-index: 10;
+    z-index: 1;
     pointer-events: none;
 }
 
+.card-hoy::before {
+    content: '🎉 🥳 🎈'; 
+    top: 5px; 
+    left: 10px;
+    transform: rotate(-15deg);
+}
 
-/* Título principal */
-.hoy-titulo {
+.card-hoy::after {
+    content: '🎁 🎂 🥳'; 
+    bottom: 5px; 
+    right: 10px;
+    transform: rotate(15deg);
+}
+
+/* Título principal (Actualizado para coincidir con <h3> del JS) */
+.card-hoy h3 {
     font-size: 1.6em;
     font-weight: 900;
     letter-spacing: 2px;
-    display: block;
     margin: 5px 0 15px;
-    color: #4B0082; /* Púrpura oscuro para el texto principal */
-    text-shadow: 1px 1px 0 #FFF, 2px 2px 0 #FFD700; /* Sombra de texto divertida */
+    color: #4B0082;
+    text-shadow: 1px 1px 0 #FFF;
+    position: relative;
+    z-index: 2;
 }
 
-/* Contenedor de la lista de funcionarios */
-.hoy-listado {
-    margin-top: 10px;
-    padding: 10px;
-    border-top: 2px solid rgba(255, 255, 255, 0.5);
-    font-size: 1.1em;
-    line-height: 1.6;
-    color: #333;
-    background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente blanco para el listado */
-    border-radius: 8px;
-}
-
-/* Grado y Nombre del funcionario */
-.hoy-funcionario {
+/* Contenedor de nombres de hoy */
+.card-hoy p {
     font-weight: 700;
     color: #E91E63; /* Rosa de celebración */
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 5px 0;
+    display: inline-block; /* Para que el fondo blanco se ajuste al texto */
+    min-width: 60%;
+    position: relative;
+    z-index: 2;
 }
 
 /* ================================================= */
-/* --- ESTILOS DE PRÓXIMOS CUMPLEAÑOS (MEJORAS) --- */
+/* --- ESTILOS DE PRÓXIMOS CUMPLEAÑOS --- */
 /* ================================================= */
 
-/* Hace el nombre y el mensaje más legibles y estilizados */
-#cumpleanios-listado ul li span:first-child {
-    font-weight: normal;
+/* Contenedor de la fila (Actualizado para .fila-cumple del JS) */
+.fila-cumple {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    transition: background 0.3s;
+}
+
+.fila-cumple:hover {
+    background: #f9f9f9;
+}
+
+.fila-cumple span {
+    font-weight: 500;
     color: #333;
 }
 
-#cumpleanios-listado ul li span:last-child {
+.fila-cumple small {
     font-weight: 400;
-    color: #333;
+    color: #666;
     font-style: italic;
-    min-width: 150px; /* Asegura espacio para el mensaje */
-    text-align: right;
-}
-
-/* Media Query para móvil */
-@media (max-width: 600px) {
-    .cumpleanios-hoy-card {
-        padding: 15px 20px;
-        width: 100%;
-        border-radius: 5px;
-    }
-    .hoy-titulo {
-        font-size: 1.3em;
-        margin: 5px 0 10px;
-    }
-    .hoy-listado {
-        font-size: 1em;
-    }
-    .fa-birthday-cake {
-        font-size: 1.2em;
-    }
+    font-size: 0.9rem;
 }
 
 
@@ -129,20 +109,20 @@ content: '🎁 🎂 🥳';
 /* --- ESTILOS PARA EL CONTENIDO PRINCIPAL DEL BODY (GRID DE TARJETAS) --- */
 
 .main-content {
-    /* Mantiene el contenido centrado y con margen interno */
-    width: 90%;
-    max-width: 1200px; /* Ancho máximo para el contenido en pantallas grandes */
-    margin: 20px auto;
+    width: 95%; /* Un poco más ancho para aprovechar el espacio */
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 20px 0;
-    /* Margen superior para compensar el header de escritorio (asume altura de 100px) */
-    margin-top: 100px;
+    
+    /* CORRECCIÓN: Reducimos de 100px a 30px o 40px para que pegue más al header */
+    margin-top: 30px; 
 }
 
 .grid-title {
     color: var(--texto);
-    font-size: 2rem;
-    /* CORRECCIÓN 1: Aumentado el margen inferior para separar el título de su contenido inmediato */
-    margin-bottom: 40px; 
+    font-size: 1.8rem;
+    margin-top: 40px;    /* Espacio antes del título */
+    margin-bottom: 25px; /* Espacio después del título hacia el contenido */
     border-bottom: 3px solid var(--verde);
     padding-bottom: 10px;
     font-weight: 300;
