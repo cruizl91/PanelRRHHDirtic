@@ -1,58 +1,73 @@
-/* Estilos para el botón de menú (hamburguesa) */
+/* ==========================================================================
+   ESTILOS DEL MENÚ LATERAL - RR.HH. DIRTIC
+   ========================================================================== */
+
+/* 1. Botón de menú (hamburguesa) */
 .menu-toggle {
     background: none;
     border: none;
-    color: var(--blanco, #ffffff);
+    color: #ffffff; /* Blanco para contraste sobre el verde del header */
     font-size: 1.8rem;
     cursor: pointer;
     padding: 5px;
     margin-right: 15px;
-    z-index: 1002; /* Más alto que el menú lateral y el header */
+    z-index: 1002; /* Siempre por encima del contenido */
+    transition: transform 0.2s ease, opacity 0.2s;
 }
 
-/* Agrupación de botón y marca en el header */
+.menu-toggle:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
 .header-left-group {
     display: flex;
     align-items: center;
 }
 
-/* Estilos del menú lateral */
-/* 1. Estilos del contenedor del menú */
+/* 2. Estilos del contenedor del menú lateral */
 .side-menu {
     position: fixed;
     top: 0;
-    left: -250px; /* OCULTO: Fuera de la pantalla */
-    width: 250px;
+    left: -280px; /* Oculto: un poco más ancho para evitar sombras residuales */
+    width: 280px;
     height: 100%;
-    background-color: var(--blanco, #ffffff); 
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    /* El padding-top debe ser mayor que la altura del header (aprox 80px) */
-    padding-top: 80px; 
-    transition: left 0.3s ease-in-out;
-    z-index: 1001; /* Asegura que esté sobre el header (990) y el contenido */
+    /* Color verde institucional solicitado */
+    background-color: #088024; 
+    box-shadow: 4px 0 15px rgba(0, 0, 0, 0.3);
+    padding-top: 80px; /* Espacio para que no lo cubra el header */
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 1001; 
     display: flex;
     flex-direction: column;
 }
 
-/* 2. Clase para mostrar el menú */
+/* Clase activa para desplegar el menú */
 .side-menu.open {
-    left: 0; /* VISIBLE: Se mueve a la posición 0 */
+    left: 0;
 }
 
+/* 3. Estilos de los ítems del menú (Letras Blancas) */
 .side-menu .menu-item {
-    padding: 15px 20px;
+    padding: 18px 25px;
     text-decoration: none;
     font-weight: bold;
-    color: var(--verde, #088024);
-    border-bottom: 1px solid #eee;
-    transition: background-color 0.2s;
+    color: #ffffff; /* Letras blancas solicitadas */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Divisor sutil */
+    transition: all 0.2s ease;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    outline: none;
 }
 
-.side-menu .menu-item:hover {
-    background-color: var(--gris, #f0f0f0);
+/* Efecto visual al interactuar */
+.side-menu .menu-item:hover,
+.side-menu .menu-item:active {
+    background-color: rgba(255, 255, 255, 0.15); 
+    padding-left: 35px; /* Efecto de desplazamiento */
 }
 
-/* Estilo para un overlay opcional (para pantallas más pequeñas) */
+/* 4. Overlay (Fondo oscuro tras el menú) */
 .overlay {
     position: fixed;
     top: 0;
@@ -60,10 +75,44 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 1000; /* Bajo el menú (1001) y sobre el header (990) */
+    backdrop-filter: blur(2px); /* Suaviza el fondo */
+    z-index: 1000;
     display: none;
 }
 
 .overlay.active {
     display: block;
+}
+
+/* ==========================================================================
+   AJUSTES ESPECÍFICOS PARA MÓVIL
+   ========================================================================== */
+
+@media (max-width: 600px) {
+    .side-menu {
+        width: 85%; /* En móviles ocupa casi toda la pantalla para mejor UX */
+        left: -85%; /* Ajuste de posición oculta proporcional */
+        box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .side-menu.open {
+        left: 0;
+    }
+
+    /* Aumentamos el área de toque de los enlaces para dedos */
+    .side-menu .menu-item {
+        padding: 22px 25px; 
+        font-size: 1.1rem;
+    }
+
+    /* Ajuste del botón hamburguesa en móviles */
+    .menu-toggle {
+        font-size: 1.6rem;
+        margin-right: 10px;
+    }
+}
+
+/* Prevención de scroll cuando el menú está abierto (se activa vía JS si lo deseas) */
+body.menu-open {
+    overflow: hidden;
 }
