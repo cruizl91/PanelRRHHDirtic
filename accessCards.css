@@ -337,68 +337,56 @@ content: '🎁 🎂 🥳';
     }
 }
 
-/* ----------------------------------------------------------------- */
-/* --- MEDIA QUERY PARA MÓVILES (Ancho Máximo 600px) --- */
-/* ----------------------------------------------------------------- */
+/* ==========================================================================
+   AJUSTES RESPONSIVOS (MÓVIL)
+   ========================================================================== */
 
 @media (max-width: 600px) {
-    .main-content {
-        width: 100%;
-        /* CORRECCIÓN 3: Uso de PADDING-TOP aumentado (120px) para asegurar 
-           que el título NO quede oculto bajo el header fijo y expandido en móvil. */
-        padding: 120px 10px 10px 10px; 
-        margin: 0 auto; 
+    /* Ajuste de Títulos */
+    .grid-title {
+        font-size: 1.4rem;
     }
+
+    /* Grid de Plataformas a 1 columna */
     .main-content-grid {
-        /* Una sola columna en móviles pequeños */
         grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    
-    /* Ajuste de tipografía general para ahorrar espacio (Compartido) */
-    #cumpleanios-listado, 
-    #servicios-listado, 
-    #cumpleanios-listado ul li,
-    #servicios-listado ul li {
-        font-size: 0.9em; 
     }
 
-    /* Regla CLAVE: Configura el LI como contenedor Flex (Compartido) */
-    #cumpleanios-listado ul li,
-    #servicios-listado ul li {
-        display: flex; 
-        justify-content: space-between; 
-        gap: 5px; 
-        align-items: center;
-    }
-    
-    /* 1. Estilo para el contenido principal del Personal de Servicio (Nombre/Dotación) */
-    #servicios-listado ul li > span:first-child {
-        white-space: normal; /* Permite el salto de línea (SOLO SERVICIOS) */
-        flex-grow: 1;      
-        min-width: 0;      
-        text-align: left;  
-    }
-    
-    /* 1b. Estilo para el contenido principal de Cumpleaños (Nombre) */
-    #cumpleanios-listado ul li > span:first-child {
-        font-weight: normal;
-        white-space: nowrap; /* Mantiene el texto en una sola línea (SOLO CUMPLEAÑOS) */
-        overflow: hidden;    /* Oculta si es demasiado largo */
-        text-overflow: ellipsis; /* Añade puntos suspensivos si es cortado */
-        flex-grow: 1;
-        min-width: 0; 
-        text-align: left;
+    /* --- Transformación de Personal de Servicio a Vista Móvil --- */
+    .servicio-header {
+        display: none !important; /* Ocultamos encabezados en móvil para ganar espacio */
     }
 
-
-    /* 2. Estilo para el contenido secundario (IP/Días restantes) */
-    #cumpleanios-listado ul li > span:nth-child(2),
-    #servicios-listado ul li > span:nth-child(2) {
-        text-align: right; 
-        flex-shrink: 0;    
-        white-space: nowrap; 
+    .servicio-row {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        padding: 15px !important;
+        gap: 10px !important;
     }
 
+    /* Contenedores de datos en móvil */
+    .servicio-row > div {
+        width: 100% !important;
+        text-align: left !important;
+        margin: 0 !important;
+    }
+
+    /* Combinación inferior: Teléfono e IP/Anexo en una sola línea */
+    .servicio-row > div:nth-child(3),
+    .servicio-row > div:nth-child(4) {
+        display: flex !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        border-top: 1px dashed #eee;
+        padding-top: 10px;
+        margin-top: 5px !important;
+    }
+
+    /* Ajuste de botones para pulgares */
+    .servicio-row a {
+        padding: 8px 12px !important;
+        font-size: 0.85rem !important;
+        border-radius: 15px !important;
+    }
  
 }
