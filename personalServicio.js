@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${servicio}
                     </div>
 
-                    <div style="flex: 2.5; font-size: 0.95rem; color: #333; font-weight: 500;">
+                    <div style="flex: 2.5; font-size: 0.95rem; color: #333;">
                         ${gradoYNombre}
                     </div>
 
